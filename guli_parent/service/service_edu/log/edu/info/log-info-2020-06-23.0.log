@@ -1,0 +1,15 @@
+2020-06-23 20:47:08.337 [main] INFO  com.chz.EduMock - Starting EduMock on DESKTOP-I2J9OJP with PID 10860 (started by 82341 in D:\workspace_for_idea\谷粒学院\guli_parent\service\service_edu)
+2020-06-23 20:47:08.339 [main] INFO  com.chz.EduMock - The following profiles are active: dev
+2020-06-23 20:47:09.630 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-23 20:47:09.635 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-23 20:47:09.680 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2020-06-23 20:47:12.845 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-06-23 20:47:13.281 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-23 20:47:14.438 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-06-23 20:47:14.485 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-06-23 20:47:14.532 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-06-23 20:47:14.773 [main] INFO  com.chz.EduMock - Started EduMock in 7.022 seconds (JVM running for 8.684)
+2020-06-23 20:47:15.424 [main] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2020-06-23 20:47:15.424 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2020-06-23 20:47:15.425 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2020-06-23 20:47:15.478 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

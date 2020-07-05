@@ -1,0 +1,1 @@
+2020-06-25 08:40:03.534 [main] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.

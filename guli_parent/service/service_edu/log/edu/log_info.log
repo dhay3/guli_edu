@@ -1,0 +1,32 @@
+2020-07-03 23:41:19.782 [main] INFO  com.chz.EduMock - Starting EduMock on DESKTOP-I2J9OJP with PID 16344 (started by 82341 in D:\workspace_for_idea\谷粒学院\guli_parent\service\service_edu)
+2020-07-03 23:41:19.786 [main] INFO  com.chz.EduMock - The following profiles are active: dev
+2020-07-03 23:41:21.129 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-03 23:41:21.132 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-03 23:41:21.178 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 0 Redis repository interfaces.
+2020-07-03 23:41:24.703 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-03 23:41:25.178 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-03 23:41:26.404 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-03 23:41:26.441 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-03 23:41:26.492 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-03 23:41:26.735 [main] INFO  com.chz.EduMock - Started EduMock in 7.594 seconds (JVM running for 9.332)
+2020-07-03 23:41:27.114 [main] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2020-07-03 23:41:27.115 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2020-07-03 23:41:27.115 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+2020-07-03 23:41:27.167 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-03 23:41:40.973 [main] INFO  com.chz.EduMock - Starting EduMock on DESKTOP-I2J9OJP with PID 3024 (started by 82341 in D:\workspace_for_idea\谷粒学院\guli_parent\service\service_edu)
+2020-07-03 23:41:40.975 [main] INFO  com.chz.EduMock - The following profiles are active: dev
+2020-07-03 23:41:52.452 [main] INFO  com.chz.EduMock - Starting EduMock on DESKTOP-I2J9OJP with PID 2844 (started by 82341 in D:\workspace_for_idea\谷粒学院\guli_parent\service\service_edu)
+2020-07-03 23:41:52.454 [main] INFO  com.chz.EduMock - The following profiles are active: dev
+2020-07-03 23:41:53.446 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-03 23:41:53.449 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-03 23:41:53.487 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2020-07-03 23:41:56.638 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-03 23:41:57.064 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-03 23:41:57.940 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-03 23:41:57.990 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-03 23:41:58.035 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-03 23:41:58.255 [main] INFO  com.chz.EduMock - Started EduMock in 6.54 seconds (JVM running for 7.883)
+2020-07-03 23:41:58.530 [main] INFO  org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2020-07-03 23:41:58.530 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2020-07-03 23:41:58.531 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+2020-07-03 23:41:58.570 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
