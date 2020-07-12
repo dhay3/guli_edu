@@ -1,18 +1,30 @@
 package com.chz.eduservice.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.domain.CourseDescription;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
+import com.chz.eduservice.entity.vo.CourseQuery;
 import com.chz.eduservice.mapper.CourseDescriptionMapper;
 import com.chz.eduservice.mapper.CourseMapper;
+import com.chz.eduservice.mapper.SubjectMapper;
 import com.chz.eduservice.service.CourseService;
 import com.chz.utils.CusException;
+import com.chz.utils.statuscode.CourseStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -27,6 +39,9 @@ import org.springframework.stereotype.Service;
 public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> implements CourseService {
     @Autowired
     private CourseDescriptionMapper courseDescriptionMapper;
+
+    @Autowired
+    private SubjectMapper subjectMapper;
 
     /**
      * 添加课程信息
@@ -94,12 +109,27 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
 
     /**
-     *
      * @param id 根据courseId查询所用的course信息
      * @return
      */
     @Override
     public CoursePublishInfoVo getCourseAllInfoById(String id) {
         return baseMapper.getCourseAllInfoById(id);
+    }
+
+    /**
+     * 分页查询course
+     *
+     * @param course
+     * @param cur
+     * @param size
+     * @return
+     */
+    @Override
+    public Page<CoursePublishInfoVo> pageCourseAllInfo(Integer cur, Integer size, CourseQuery courseQuery) {
+        Page<CoursePublishInfoVo> page = new Page<>(cur, size);
+        //将带条件的查询结果封装到page中,作为page中的数据
+        page.setRecords(baseMapper.pageCourseAllInfo(page, courseQuery));
+        return page;
     }
 }

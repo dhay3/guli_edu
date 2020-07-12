@@ -19,7 +19,14 @@ public interface SubjectService extends IService<Subject> {
     /**
      * 添加课程分类
      */
-    boolean saveSubject(MultipartFile file,SubjectService subjectService);
+    boolean saveSubject(MultipartFile file, SubjectService subjectService);
 
     List<SubjectVo> getAllOneTwoSubject();
+
+    /**
+     * 根据父级课程title, 获取所有子级title
+     * @return
+     * @param title
+     */
+    List<String> getSubTitlesByParentTitle(String title);
 }

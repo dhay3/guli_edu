@@ -18,11 +18,26 @@ public class GlobalExceptionHandler {
      * 错误也返回ResponseBo统一处理
      */
     @ExceptionHandler(CusException.class)
-    public ResponseBo error(CusException e) {
+    public ResponseBo cusErrorHandler(CusException e) {
         e.printStackTrace();
-        log.error( ExceptionUtil.getMessage(e));
+        log.error(ExceptionUtil.getMessage(e));
         return ResponseBo.error()
                 .message(e.getMessage())
                 .code(e.getErrorCode());
+    }
+
+    /**
+     * 没有可以处理异常的ExceptionHandler经过该处理器
+     *
+     * @param e
+     * @return
+     */
+    @ExceptionHandler
+    public ResponseBo errorHandler(Exception e) {
+        e.printStackTrace();
+        log.error("{}", "没有匹配的处理器,调用全局异常处理器");
+        log.error(ExceptionUtil.getMessage(e));
+        return ResponseBo.error()
+                .message(e.getMessage());
     }
 }

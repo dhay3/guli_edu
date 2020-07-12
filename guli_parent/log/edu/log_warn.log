@@ -1,11 +1,412 @@
-2020-07-03 13:16:16.903 [http-nio-8001-exec-7] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-07-03 13:55:52.173 [http-nio-8001-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [CusException(errorCode=20001)]
-2020-07-03 17:31:08.167 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-07-03 17:35:34.573 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-07-03 17:59:19.349 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterController': Unsatisfied dependency expressed through field 'chapterService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterMapper' defined in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\ChapterMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties': Could not bind properties to 'MybatisPlusProperties' : prefix=mybatis-plus, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'mybatis-plus.mapper-locations' to java.lang.String[]
-2020-07-03 18:03:03.814 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-07-03 18:15:36.002 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-07-03 22:28:47.516 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-07-03 22:48:53.667 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'subjectController': Unsatisfied dependency expressed through field 'subjectService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.service.SubjectService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2020-07-03 22:51:13.458 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-07-03 22:53:15.966 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 00:03:10.457 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 00:16:32.972 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 00:16:34.082 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'es2.subject_id' in 'where clause'
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT ec.id, ec.title, ec.price, ec.lesson_num AS lessonNum, et.name AS teacherName, es1.title AS subjectLevelOne, es2.title AS subjectLevelTwo FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id WHERE es2.subject_id = ? LIMIT 0, 5
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'es2.subject_id' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'es2.subject_id' in 'where clause']
+2020-07-12 00:17:45.612 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 00:22:14.772 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 00:28:44.389 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 14:30:21.742 [http-nio-8001-exec-8] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 15:33:19.050 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:13:17.139 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:20:27.279 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:22:00.564 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.chz.EduApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/chz/eduservice/service/TeacherService.class] cannot be opened because it does not exist
+2020-07-12 16:36:41.728 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:40:04.511 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:40:04.552 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY 
+        LIMIT 0, 5
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY 
+        LIMIT 0, 5]
+2020-07-12 16:40:39.325 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:40:40.446 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: 
+### Error querying database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'gmt_create' in order clause is ambiguous
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum, et.name AS teacherName, es1.title AS subjectLevelOne, es2.title AS subjectLevelTwo FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id ORDER BY gmt_create DESC LIMIT 0, 5
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'gmt_create' in order clause is ambiguous
+; Column 'gmt_create' in order clause is ambiguous; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'gmt_create' in order clause is ambiguous]
+2020-07-12 16:41:04.531 [http-nio-8001-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: 
+### Error querying database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'gmt_create' in order clause is ambiguous
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum, et.name AS teacherName, es1.title AS subjectLevelOne, es2.title AS subjectLevelTwo FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id ORDER BY gmt_create DESC LIMIT 0, 5
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'gmt_create' in order clause is ambiguous
+; Column 'gmt_create' in order clause is ambiguous; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'gmt_create' in order clause is ambiguous]
+2020-07-12 16:41:25.103 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:47:57.401 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 16:48:07.691 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'courseController' defined in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\controller\CourseController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.chz.eduservice.controller.CourseController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@312acdfc]
+2020-07-12 17:15:33.287 [http-nio-8001-exec-7] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 17:17:13.384 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 17:35:22.009 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.service.CourseService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-12 17:39:53.888 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'courseMapper': FactoryBean threw exception on object creation; nested exception is java.lang.ExceptionInInitializerError
+2020-07-12 17:41:40.244 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.service.CourseService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-12 17:47:55.025 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.service.CourseService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-12 17:55:39.822 [http-nio-8001-exec-6] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 17:55:40.672 [http-nio-8001-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum,ec.view_count AS viewCount
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum,ec.view_count AS viewCount
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 17:56:00.687 [http-nio-8001-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum,ec.view_count AS viewCount
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status, ec.lesson_num AS lessonNum,ec.view_count AS viewCount
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 17:57:01.849 [http-nio-8001-exec-5] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 17:59:16.450 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.service.CourseService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-12 18:00:39.779 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.service.CourseService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-12 18:01:11.838 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.service.CourseService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-12 18:02:06.503 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:04:18.005 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.chz.eduservice.mapper.CourseMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-07-12 18:04:52.054 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:14:09.950 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:23:52.626 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:25:52.000 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:30:21.475 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterController': Unsatisfied dependency expressed through field 'chapterService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterMapper' defined in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\ChapterMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.chz.eduservice.entity.vo.CoursePublishInfoVo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.chz.eduservice.entity.vo.CoursePublishInfoVo
+2020-07-12 18:31:55.170 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:38:08.570 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterController': Unsatisfied dependency expressed through field 'chapterService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterMapper' defined in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\ChapterMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.chz.eduservice.entity.vo.CoursePublishInfoVo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.chz.eduservice.entity.vo.CoursePublishInfoVo
+2020-07-12 18:38:17.255 [http-nio-8001-exec-5] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:43:28.105 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterController': Unsatisfied dependency expressed through field 'chapterService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'chapterMapper' defined in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\ChapterMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.chz.eduservice.entity.vo.CoursePublishInfoVo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.chz.eduservice.entity.vo.CoursePublishInfoVo
+2020-07-12 18:43:44.487 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:43:44.530 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 18:43:47.106 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 18:43:58.346 [http-nio-8001-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+          
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 18:44:06.957 [http-nio-8001-exec-4] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:52:41.215 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:52:43.873 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 18:53:36.701 [http-nio-8001-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 18:54:28.442 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 18:59:59.254 [http-nio-8001-exec-6] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 19:00:01.138 [http-nio-8001-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Error: Method queryTotal execution error of sql : 
+ SELECT COUNT(1) FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id WHERE ec.title LIKE '%?%' 
+
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Error: Method queryTotal execution error of sql : 
+ SELECT COUNT(1) FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id WHERE ec.title LIKE '%?%' 
+]
+2020-07-12 19:00:21.007 [http-nio-8001-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Error: Method queryTotal execution error of sql : 
+ SELECT COUNT(1) FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id WHERE ec.title LIKE '%?%' 
+
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Error: Method queryTotal execution error of sql : 
+ SELECT COUNT(1) FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id WHERE ec.title LIKE '%?%' 
+]
+2020-07-12 19:01:25.951 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 19:01:28.395 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 19:03:40.482 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 19:03:42.473 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Error: Method queryTotal execution error of sql : 
+ SELECT COUNT(1) FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id WHERE ec.title LIKE CONCAT 
+
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Error: Method queryTotal execution error of sql : 
+ SELECT COUNT(1) FROM edu_course ec LEFT JOIN edu_course_description ecd ON ec.id = ecd.id LEFT JOIN edu_teacher et ON ec.teacher_id = et.id LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id WHERE ec.title LIKE CONCAT 
+]
+2020-07-12 19:03:51.646 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 19:04:52.165 [http-nio-8001-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-12 19:04:54.677 [http-nio-8001-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC
+### The error may exist in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\mapper\xml\CourseMapper.xml]
+### The error may involve com.chz.eduservice.mapper.CourseMapper.pageCourseAllInfo
+### The error occurred while executing a query
+### Cause: com.baomidou.mybatisplus.core.exceptions.MybatisPlusException: Failed to process, please exclude the tableName or statementId.
+ Error SQL: SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+         WHERE  ec.title like "%"?"%" 
+        ORDER BY ec.gmt_create DESC]
+2020-07-12 19:06:44.286 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.

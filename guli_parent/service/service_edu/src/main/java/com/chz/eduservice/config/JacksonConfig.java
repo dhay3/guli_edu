@@ -11,7 +11,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * 同时对Date和LocalDateTime都生效
+ * 对LocalDateTime生效, Date 通过yml配置文件配置
+ * 不会影响数据库中的datetime转换类型(mybatis自动转换),只会对数据转换为Json类型产生影响
  */
 @Configuration
 public class JacksonConfig {

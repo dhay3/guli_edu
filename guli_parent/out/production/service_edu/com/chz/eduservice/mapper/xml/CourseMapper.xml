@@ -39,6 +39,56 @@
         LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
         WHERE ec.id = #{id}
     </select>
+    <!--
+            如果封装的实体类中的属性名与表中的字段名相同就可以不使用AS
+            如果开启驼峰命名规则,也可以不适用AS
+            动态拼接sql
+            #{}会对参数使用'', ${}不会对参数使用''
+            注意:
+            模糊查询
+            方法一 '%${xxx}%',  ${}会直接将参数对应的值取到,但是有sql注入危险
+            不能使用  '%#{}%'  ,  "%"#{}"%"
+            使用 CONCAT('%',#{courseQuery.title},'%') 拼接
+            使用limit时不能使用#{会自动添加''}, 必须使用${}
+            可以使用如下形式,但是存在sql注入的风险
+            ${(curPage-1)*pageSize}, ${pageSize}
+    -->
+    <select id="pageCourseAllInfo" resultType="com.chz.eduservice.entity.vo.CoursePublishInfoVo">
+        SELECT ec.id, ec.title, ec.price, ec.status,
+        ec.lesson_num ,ec.view_count, ec.buy_count,
+        ec.gmt_create,
+        et.name AS teacherName,
+        es1.title AS subjectLevelOne,
+        es2.title AS subjectLevelTwo
+        FROM edu_course ec
+        LEFT JOIN edu_course_description ecd ON ec.id = ecd.id
+        LEFT JOIN edu_teacher et ON ec.teacher_id = et.id
+        LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
+        LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
+        <where>
+            <if test="courseQuery.title!=null">
+                AND ec.title like CONCAT('%',#{courseQuery.title},'%')
+            </if>
+            <if test="courseQuery.teacherId!=null">
+                AND et.id = #{courseQuery.teacherId}
+            </if>
+            <if test="courseQuery.subjectParentId!=null">
+                AND ec.subject_parent_id = #{courseQuery.subjectParentId}
+            </if>
+            <if test="courseQuery.subjectId!=null">
+                AND ec.subject_id = #{courseQuery.subjectId}
+            </if>
+            <if test="courseQuery.status!=null">
+                AND ec.status = #{courseQuery.status}
+            </if>
+            <if test="courseQuery.beginPrice!=null and courseQuery.endPrice!=null">
+                AND ec.price BETWEEN courseQuery.beginPrice AND courseQuery.endPrice
+            </if>
+        </where>
+        ORDER BY ec.gmt_create DESC
+    </select>
+    <!--    可以直接接分页, 但是拿不到总条数-->
+    <!--    LIMIT ${(curPage-1)*pageSize}, ${pageSize}-->
 
 
 </mapper>

@@ -1,4 +1,4 @@
-package com.chz.utils;
+package com.chz.utils.statuscode;
 
 import io.swagger.annotations.ApiModel;
 

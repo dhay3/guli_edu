@@ -43,5 +43,16 @@ public class SubjectController {
         List<SubjectVo> subjectTree = subjectService.getAllOneTwoSubject();
         return ResponseBo.ok().data("list", subjectTree);
     }
+
+    /**
+     * 根据一级的title,获取所有的二级title
+     * @param title
+     * @return
+     */
+    @GetMapping("/{title}")
+    public ResponseBo getSubjectByTitle(@PathVariable String title){
+        List<String> list = subjectService.getSubTitlesByParentTitle(title);
+        return ResponseBo.ok().data("titles",list);
+    }
 }
 

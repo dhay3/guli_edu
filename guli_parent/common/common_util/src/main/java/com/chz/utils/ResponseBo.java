@@ -1,5 +1,6 @@
 package com.chz.utils;
 
+import com.chz.utils.statuscode.ResultCode;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

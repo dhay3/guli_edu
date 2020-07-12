@@ -40,6 +40,7 @@ public class SubjectServiceImpl extends ServiceImpl<SubjectMapper, Subject> impl
     /**
      * 添加课程分类
      * 将xslx中读取到数据添加到数据库中, 然后通过调用sql回显数据到页面
+     *
      * @param file 需要上传的excel
      * @return 是否添加成功
      */
@@ -105,4 +106,27 @@ public class SubjectServiceImpl extends ServiceImpl<SubjectMapper, Subject> impl
         }
         return subjectVoList;
     }
+
+    /**
+     * 根据父级课程title, 获取所有子级title
+     *
+     * @param title
+     * @return
+     */
+    @Override
+    public List<String> getSubTitlesByParentTitle(String title) {
+        return baseMapper.getSubTitlesByParentTitle(title);
+    }
+
+//    /**
+//     * 根据科目名字获取所有科目
+//     * @param subjectOneName
+//     * @return
+//     */
+//    public List<Subject> getSubjectByTitle(String subjectOneName) {
+//        return baseMapper.selectList(new QueryWrapper<Subject>().lambda()
+//                .eq(Subject::getTitle, subjectOneName));
+//    }
+
+
 }

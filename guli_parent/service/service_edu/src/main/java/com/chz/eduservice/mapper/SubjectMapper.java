@@ -1,7 +1,9 @@
 package com.chz.eduservice.mapper;
 
-import com.chz.eduservice.entity.domain.Subject;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.chz.eduservice.entity.domain.Subject;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +15,10 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface SubjectMapper extends BaseMapper<Subject> {
 
+    /**
+     *
+     * @param title
+     * @return
+     */
+    List<String> getSubTitlesByParentTitle(String title);
 }

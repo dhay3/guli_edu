@@ -1,16 +1,22 @@
 package com.chz.eduservice.controller;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
+import com.chz.eduservice.entity.vo.CourseQuery;
 import com.chz.eduservice.service.CourseService;
-import com.chz.utils.CourseStatus;
 import com.chz.utils.ResponseBo;
+import com.chz.utils.statuscode.CourseStatus;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.constraints.Min;
+import java.util.HashMap;
 
 /**
  * <p>
@@ -21,6 +27,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 2020-06-24
  */
 @Api("课程接口")
+@Validated
 @RestController
 @CrossOrigin//接收所有跨域请求
 @RequestMapping("/eduservice/course")
@@ -66,10 +73,36 @@ public class CourseController {
     @PostMapping("/publish/{id}")
     public ResponseBo publishCourse(@PathVariable String id) {
         Course course = new Course();
-        //设置课程发布状态
-        course.setStatus(CourseStatus.Normal.toString());
+        //设置课程发布状态, 使用枚举类控制细粒度, 枚举类能与数据库中的String类型互相转换
+        course.setStatus(CourseStatus.Normal);
+//        course.setStatus(CourseStatus.Normal.toString());
         course.setId(id);
+        courseService.updateById(course);
         return ResponseBo.ok();
     }
+
+    /**
+     * 根据指定信息分页查询用户
+     * 这里@Min(1)只作为提示, sql异常会优先抛出
+     * 注意get请求没有body,因为@RequestBody所以接收的请求必须是post
+     *
+     * @param curPage     jsr303 校验最小值为1
+     * @param pageSize
+     * @param courseQuery
+     * @return
+     */
+    @ApiOperation(value = "分页查询")
+    @PostMapping("/{curPage}/{pageSize}")
+    public ResponseBo pageCourseOnCondition(@Min(1) @PathVariable Integer curPage,
+                                            @PathVariable Integer pageSize,
+                                            @RequestBody CourseQuery courseQuery) {
+        HashMap<String, Object> map = new HashMap<>();
+        Page<CoursePublishInfoVo> page = courseService.pageCourseAllInfo(curPage, pageSize, courseQuery);
+        map.put("courses",page.getRecords());
+        map.put("total",page.getTotal());
+        return ResponseBo.ok().data("info", map);
+    }
+
+
 }
 

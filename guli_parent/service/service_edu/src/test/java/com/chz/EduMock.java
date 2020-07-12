@@ -1,7 +1,7 @@
 package com.chz;
 
 import com.chz.eduservice.controller.TeacherController;
-import com.chz.utils.CourseStatus;
+import com.chz.utils.statuscode.CourseStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

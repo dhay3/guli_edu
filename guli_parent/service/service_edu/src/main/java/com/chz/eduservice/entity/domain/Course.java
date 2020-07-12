@@ -1,6 +1,7 @@
 package com.chz.eduservice.entity.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.chz.utils.statuscode.CourseStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -23,10 +24,10 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("edu_course")
-@ApiModel(value="Course对象", description="课程")
+@ApiModel(value = "Course对象", description = "课程")
 public class Course implements Serializable {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "课程ID")
     @TableId(value = "id", type = IdType.ASSIGN_ID)
@@ -61,9 +62,11 @@ public class Course implements Serializable {
 
     @ApiModelProperty(value = "乐观锁")
     private Long version;
-
-    @ApiModelProperty(value = "课程状态 Draft未发布  Normal已发布")
-    private String status;
+    /**
+     * 这里注意的是, 不能将类型设置为枚举类, 必须将JavaType和JDBCType一一对应
+     */
+    @ApiModelProperty(value = "课程状态 Draft未发布  Normal已发布", notes = "可以使用枚举类")
+    private CourseStatus status;
 
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
     @TableLogic
@@ -76,6 +79,4 @@ public class Course implements Serializable {
     @ApiModelProperty(value = "更新时间")
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime gmtModified;
-
-
 }

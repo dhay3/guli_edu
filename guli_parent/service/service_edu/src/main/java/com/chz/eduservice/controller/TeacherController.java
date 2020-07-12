@@ -15,8 +15,10 @@ import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.Min;
 import java.util.List;
 
 /**
@@ -28,6 +30,7 @@ import java.util.List;
  * @since 2020-05-21
  */
 @Api("教师接口")
+@Validated
 @RestController
 //允许跨域请求
 @CrossOrigin(origins = "http://localhost:9528")
@@ -99,36 +102,14 @@ public class TeacherController {
             @ApiImplicitParam(name = "teacherQuery", value = "条件封装类",
                     dataTypeClass = TeacherQuery.class, required = false, paramType = "body"),
     })
-    public ResponseBo pageTeacherCondition(@PathVariable("current") Integer currentPage,
+    public ResponseBo pageTeacherCondition(@Min(1) @PathVariable("current") Integer currentPage,
                                            @PathVariable("size") Integer pageSize,
                                            @RequestBody(required = false) TeacherQuery teacherQuery) {
-        LambdaQueryWrapper<Teacher> wrapper = new QueryWrapper<Teacher>().lambda();
-        //当发送空串时使用{}
-        String name = teacherQuery.getName();
-        Integer level = teacherQuery.getLevel();
-        String begin = teacherQuery.getBegin();
-        String end = teacherQuery.getEnd();
-        //动态sql
-        if (!StringUtils.isEmpty(name)) {
-            wrapper.like(Teacher::getName, name);
-        }
-        if (!ObjectUtils.isEmpty(level)) {
-            wrapper.like(Teacher::getLevel, level);
-        }
-        //大于等于开始时间
-        if (!StringUtils.isEmpty(begin)) {
-            wrapper.ge(Teacher::getGmtCreate, begin);
-        }
-        //小于等于结束时间
-        if (!StringUtils.isEmpty(end)) {
-            wrapper.le(Teacher::getGmtModified, end);
-        }
-        //按时间排序
-        wrapper.orderByDesc(Teacher::getGmtCreate);
-        IPage<Teacher> teacherPage = new Page<>(currentPage, pageSize);
-        teacherService.page(teacherPage, wrapper);
-        long total = teacherPage.getTotal();
-        List<Teacher> teachers = teacherPage.getRecords();
+
+        IPage<Teacher> iPage = teacherService.pageTeacherCondition(currentPage, pageSize, teacherQuery);
+        List teachers = iPage.getRecords();
+        //total返回的因该是所有符合条件的结果,而不是limit后的返回的结果条数
+        long total = iPage.getTotal();
         return ResponseBo.ok().data("total", total).data("teachers", teachers);
     }
 
@@ -152,7 +133,8 @@ public class TeacherController {
 
     @GetMapping("/test")
     public void test() {
-        throw new CusException("测试异常", 500);
+//        throw new CusException("测试异常", 500);
+        throw new NullPointerException();
     }
 
 }

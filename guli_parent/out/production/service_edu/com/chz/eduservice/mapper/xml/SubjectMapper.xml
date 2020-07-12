@@ -4,17 +4,22 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.chz.eduservice.entity.domain.Subject">
-        <id column="id" property="id" />
-        <result column="title" property="title" />
-        <result column="parent_id" property="parentId" />
-        <result column="sort" property="sort" />
-        <result column="gmt_create" property="gmtCreate" />
-        <result column="gmt_modified" property="gmtModified" />
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="sort" property="sort"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, title, parent_id, sort, gmt_create, gmt_modified
     </sql>
-
+    <!--    这里注意的是resultType是String,即集合中元素-->
+    <select id="getSubTitlesByParentTitle" resultType="string">
+        SELECT title FROM edu_subject
+        WHERE  parent_id
+        IN  (SELECT id FROM edu_subject WHERE title = #{title})
+    </select>
 </mapper>

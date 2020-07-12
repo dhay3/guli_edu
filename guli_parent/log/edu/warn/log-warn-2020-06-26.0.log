@@ -1,5 +1,0 @@
-2020-06-26 16:09:33.420 [http-nio-8001-exec-9] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-06-26 16:40:19.257 [http-nio-8001-exec-7] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-06-26 18:50:54.875 [http-nio-8001-exec-6] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-06-26 19:06:58.725 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
-2020-06-26 19:08:34.486 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.

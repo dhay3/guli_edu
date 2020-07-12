@@ -1,9 +1,13 @@
 package com.chz.eduservice.mapper;
 
-import com.chz.eduservice.entity.domain.Course;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
+import com.chz.eduservice.entity.vo.CourseQuery;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -21,4 +25,14 @@ public interface CourseMapper extends BaseMapper<Course> {
      * @return
      */
     CoursePublishInfoVo getCourseAllInfoById(@Param("id") String id);
+
+    /**
+     * 按条件分页查询course
+     *
+     * @param page 注意这里必须要有Page对象,否则mp无法完成分页查询
+     * @param courseQuery
+     * @return
+     */
+    List<CoursePublishInfoVo> pageCourseAllInfo(Page<CoursePublishInfoVo> page,
+                                                @Param("courseQuery") CourseQuery courseQuery);
 }
