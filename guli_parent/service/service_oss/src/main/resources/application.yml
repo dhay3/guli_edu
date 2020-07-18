@@ -8,4 +8,8 @@ spring:
   #环境设置
   profiles:
     active: dev
-#debug: true
+  #debug: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #nacos注册与发现
