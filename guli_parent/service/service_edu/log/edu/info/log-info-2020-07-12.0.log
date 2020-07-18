@@ -1,0 +1,32 @@
+2020-07-12 16:09:21.664 [main] INFO  com.chz.DBTest - Starting DBTest on DESKTOP-I2J9OJP with PID 10104 (started by 82341 in D:\workspace_for_idea\谷粒学院\guli_parent\service\service_edu)
+2020-07-12 16:09:21.670 [main] INFO  com.chz.DBTest - The following profiles are active: dev
+2020-07-12 16:09:22.738 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 16:09:22.741 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 16:09:22.777 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2020-07-12 16:09:26.090 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-12 16:09:26.508 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-12 16:09:27.673 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-12 16:09:27.713 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-12 16:09:27.760 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-12 16:09:28.001 [main] INFO  com.chz.DBTest - Started DBTest in 7.224 seconds (JVM running for 9.082)
+2020-07-12 16:09:28.592 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Starting...
+2020-07-12 16:09:30.161 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Start completed.
+2020-07-12 16:09:30.325 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-12 16:09:30.328 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown initiated...
+2020-07-12 16:09:30.336 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown completed.
+2020-07-12 16:10:27.608 [main] INFO  com.chz.DBTest - Starting DBTest on DESKTOP-I2J9OJP with PID 13364 (started by 82341 in D:\workspace_for_idea\谷粒学院\guli_parent\service\service_edu)
+2020-07-12 16:10:27.610 [main] INFO  com.chz.DBTest - The following profiles are active: dev
+2020-07-12 16:10:28.918 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-12 16:10:28.922 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-12 16:10:28.974 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33ms. Found 0 Redis repository interfaces.
+2020-07-12 16:10:32.151 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-12 16:10:32.596 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-12 16:10:33.520 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-12 16:10:33.569 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-12 16:10:33.617 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-12 16:10:33.874 [main] INFO  com.chz.DBTest - Started DBTest in 6.844 seconds (JVM running for 8.194)
+2020-07-12 16:10:34.274 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Starting...
+2020-07-12 16:10:35.963 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Start completed.
+2020-07-12 16:10:36.148 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-12 16:10:36.150 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown initiated...
+2020-07-12 16:10:36.158 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Shutdown completed.

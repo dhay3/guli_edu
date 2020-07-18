@@ -1,0 +1,12 @@
+2020-07-06 23:50:38.744 [main] INFO  com.chz.DBTest - Starting DBTest on DESKTOP-I2J9OJP with PID 6960 (started by 82341 in D:\workspace_for_idea\谷粒学院\guli_parent\service\service_edu)
+2020-07-06 23:50:38.747 [main] INFO  com.chz.DBTest - The following profiles are active: dev
+2020-07-06 23:50:41.072 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-06 23:50:41.084 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-06 23:50:41.224 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69ms. Found 0 Redis repository interfaces.
+2020-07-06 23:50:45.428 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-06 23:50:46.206 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 23:50:47.864 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-06 23:50:47.909 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-06 23:50:47.971 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-06 23:50:48.236 [main] INFO  com.chz.DBTest - Started DBTest in 11.12 seconds (JVM running for 13.47)
+2020-07-06 23:50:48.868 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "aliyun.oss.file",
+      "type": "com.chz.uitls.OssUtils",
+      "sourceType": "com.chz.uitls.OssUtils"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
