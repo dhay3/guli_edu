@@ -21,7 +21,7 @@ import java.io.IOException;
 @RequestMapping("/eduoss/fileoss")
 public class OssController {
     @Autowired
-    IossService ossService;
+    private IossService ossService;
 
     /**
      * 上传头像方法

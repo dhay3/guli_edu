@@ -40,6 +40,7 @@
         WHERE ec.id = #{id}
     </select>
     <!--
+            查询需要使用逻辑删除条件
             如果封装的实体类中的属性名与表中的字段名相同就可以不使用AS
             如果开启驼峰命名规则,也可以不适用AS
             动态拼接sql
@@ -66,6 +67,7 @@
         LEFT JOIN edu_subject es1 ON ec.subject_parent_id = es1.id
         LEFT JOIN edu_subject es2 ON ec.subject_id = es2.id
         <where>
+            ec.is_deleted = 0
             <if test="courseQuery.title!=null">
                 AND ec.title like CONCAT('%',#{courseQuery.title},'%')
             </if>
@@ -84,8 +86,9 @@
             <if test="courseQuery.beginPrice!=null and courseQuery.endPrice!=null">
                 AND ec.price BETWEEN courseQuery.beginPrice AND courseQuery.endPrice
             </if>
+
         </where>
-        ORDER BY ec.gmt_create DESC
+        ORDER BY ec.gmt_modified DESC
     </select>
     <!--    可以直接接分页, 但是拿不到总条数-->
     <!--    LIMIT ${(curPage-1)*pageSize}, ${pageSize}-->

@@ -35,6 +35,7 @@ public class OssUtils {
 
     /**
      * 在构造器调用后调用, 效果同InitializingBean的afterPropertiesSet相同
+     * 对象被注入到ioc中就会被调用
      */
     @PostConstruct
     public void init() {

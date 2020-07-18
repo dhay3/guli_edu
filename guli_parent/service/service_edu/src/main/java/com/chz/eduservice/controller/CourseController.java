@@ -102,6 +102,11 @@ public class CourseController {
         map.put("total",page.getTotal());
         return ResponseBo.ok().data("info", map);
     }
+    @DeleteMapping("/{courseId}")
+    public ResponseBo deleteCourseById(@PathVariable String courseId){
+        courseService.removeCourseById(courseId);
+        return ResponseBo.ok();
+    }
 
 
 }

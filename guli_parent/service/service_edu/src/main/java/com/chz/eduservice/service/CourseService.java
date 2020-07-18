@@ -51,4 +51,11 @@ public interface CourseService extends IService<Course> {
      * @return
      */
     Page<CoursePublishInfoVo> pageCourseAllInfo(Integer curPage, Integer pageSize, CourseQuery courseQuery);
+
+    /**
+     * 根据课程courseId删除课程
+     * @return
+     * @param courseId
+     */
+    boolean removeCourseById(String courseId);
 }

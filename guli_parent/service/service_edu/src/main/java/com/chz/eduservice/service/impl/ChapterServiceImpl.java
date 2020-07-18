@@ -104,4 +104,9 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
         return baseMapper.deleteById(id) > 0;
     }
 
+    @Override
+    public boolean deleteChapterByCourseId(String courseId) {
+        return baseMapper.delete(new QueryWrapper<Chapter>().lambda()
+                .eq(Chapter::getCourseId, courseId)) > 0;
+    }
 }

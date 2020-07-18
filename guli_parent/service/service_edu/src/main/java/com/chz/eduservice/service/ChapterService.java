@@ -29,4 +29,6 @@ public interface ChapterService extends IService<Chapter> {
      * @return
      */
     boolean deleteChapterOnCasecade(String id);
+
+    boolean deleteChapterByCourseId(String courseId);
 }

@@ -1,8 +1,5 @@
 package com.chz.eduservice.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chz.eduservice.entity.domain.Course;
@@ -10,21 +7,18 @@ import com.chz.eduservice.entity.domain.CourseDescription;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
 import com.chz.eduservice.entity.vo.CourseQuery;
-import com.chz.eduservice.mapper.CourseDescriptionMapper;
-import com.chz.eduservice.mapper.CourseMapper;
-import com.chz.eduservice.mapper.SubjectMapper;
+import com.chz.eduservice.mapper.*;
+import com.chz.eduservice.service.ChapterService;
 import com.chz.eduservice.service.CourseService;
+import com.chz.eduservice.service.SubjectService;
+import com.chz.eduservice.service.VideoService;
 import com.chz.utils.CusException;
-import com.chz.utils.statuscode.CourseStatus;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.Objects;
 
 /**
  * <p>
@@ -37,11 +31,18 @@ import java.util.Map;
 @Service
 @Slf4j
 public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> implements CourseService {
+    /**
+     * 注意为了解耦, 调用其他类的方法是要用service层而不是mapper层
+     */
     @Autowired
-    private CourseDescriptionMapper courseDescriptionMapper;
+    private CourseDescriptionMapper courseDescriptionService;//这里要调用service层悉知
 
     @Autowired
-    private SubjectMapper subjectMapper;
+    private SubjectService subjectService;
+    @Autowired
+    private VideoService videoService;
+    @Autowired
+    private ChapterService chapterService;
 
     /**
      * 添加课程信息
@@ -68,7 +69,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         courseDescription.setId(course.getId());
         courseDescription.setDescription(courseInfoVo.getDescription());
         //创建时间和修改时间会自动插入,无需关注
-        courseDescriptionMapper.insert(courseDescription);
+        courseDescriptionService.insert(courseDescription);
         return course.getId();
     }
 
@@ -87,8 +88,9 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         CourseInfoVo courseInfoVo = new CourseInfoVo();
         BeanUtils.copyProperties(course, courseInfoVo);
         //右description的id就是课程的id是同一个所有可以通过byId查询
-        CourseDescription courseDescription = courseDescriptionMapper.selectById(courseId);
-        courseInfoVo.setDescription(courseDescription.getDescription());
+        CourseDescription courseDescription = courseDescriptionService.selectById(courseId);
+        //有可能存在数据库中的描述信息为null, 需要判断
+        courseInfoVo.setDescription(courseDescription == null?null:courseDescription.getDescription());
         return courseInfoVo;
     }
 
@@ -105,7 +107,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         CourseDescription courseDescription = new CourseDescription();
         //由于courseInfoVo中有id字段,所以也会封装进courseDescription中
         BeanUtils.copyProperties(courseInfoVo, courseDescription);
-        return baseMapper.updateById(course) > 0 && courseDescriptionMapper.updateById(courseDescription) > 0;
+        return baseMapper.updateById(course) > 0 && courseDescriptionService.updateById(courseDescription) > 0;
     }
 
     /**
@@ -132,4 +134,35 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         page.setRecords(baseMapper.pageCourseAllInfo(page, courseQuery));
         return page;
     }
+
+    /**
+     * 需要级联删除, 所以不能使用mybatis Plus自带的方法
+     *
+     * @param courseId
+     * @return
+     */
+    @Override
+    public boolean removeCourseById(String courseId) {
+        //这里其他类使用service层, 本业务类使用mapper层
+        //根据courseId删除课程小节
+        videoService.deleteByCourseId(courseId);
+        //根据课程id删除章节
+        chapterService.deleteChapterByCourseId(courseId);
+        //根据课程id删除描述
+        courseDescriptionService.deleteById(courseId);
+        //根据课程id删除本身, 删除
+        baseMapper.deleteById(courseId);
+        return true;
+    }
+
+    /**
+     * 封装方法
+     *
+     * @param target
+     * @param <T>
+     * @return
+     */
+//    private <T> LambdaQueryWrapper<T> getWrapper(Class<T> target) {
+//        return new QueryWrapper<T>().lambda();
+//    }
 }
