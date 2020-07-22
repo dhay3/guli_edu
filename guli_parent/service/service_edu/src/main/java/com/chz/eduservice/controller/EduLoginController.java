@@ -1,6 +1,6 @@
 package com.chz.eduservice.controller;
 
-import com.chz.utils.ResponseBo;
+import com.chz.response.ResponseBo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;

@@ -14,7 +14,7 @@ import com.chz.eduservice.service.ChapterService;
 import com.chz.eduservice.service.CourseService;
 import com.chz.eduservice.service.SubjectService;
 import com.chz.eduservice.service.VideoService;
-import com.chz.utils.CusException;
+import com.chz.exception.CusException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,6 @@
 package com.chz.eduservice.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -9,12 +8,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.chz.eduservice.entity.domain.Teacher;
 import com.chz.eduservice.entity.vo.TeacherQuery;
 import com.chz.eduservice.service.TeacherService;
-import com.chz.utils.CusException;
-import com.chz.utils.ResponseBo;
+import com.chz.response.ResponseBo;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.ObjectUtils;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 

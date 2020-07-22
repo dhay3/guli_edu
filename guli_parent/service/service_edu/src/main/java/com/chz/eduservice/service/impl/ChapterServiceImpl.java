@@ -9,7 +9,7 @@ import com.chz.eduservice.mapper.ChapterMapper;
 import com.chz.eduservice.mapper.VideoMapper;
 import com.chz.eduservice.service.ChapterService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.chz.utils.CusException;
+import com.chz.exception.CusException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

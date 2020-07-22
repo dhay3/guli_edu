@@ -1,7 +1,7 @@
 package com.chz.servicebase.exceptionhandler;
 
-import com.chz.utils.CusException;
-import com.chz.utils.ResponseBo;
+import com.chz.exception.CusException;
+import com.chz.response.ResponseBo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.chz.eduservice.entity.domain.Subject;
 import com.chz.eduservice.entity.excel.SubjectData;
 import com.chz.eduservice.service.SubjectService;
-import com.chz.utils.CusException;
+import com.chz.exception.CusException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.ObjectUtils;
 

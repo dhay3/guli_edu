@@ -1,12 +1,11 @@
 package com.chz.vod.controller;
 
 import com.aliyuncs.exceptions.ClientException;
-import com.chz.utils.CusException;
-import com.chz.utils.ResponseBo;
-import com.chz.utils.statuscode.ResultCode;
+import com.chz.exception.CusException;
+import com.chz.response.ResponseBo;
+import com.chz.statuscode.ResultCode;
 import com.chz.vod.service.VoDService;
 import io.swagger.annotations.Api;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

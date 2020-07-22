@@ -3,7 +3,7 @@ package com.chz.eduservice.controller;
 
 import com.chz.eduservice.entity.vo.SubjectVo;
 import com.chz.eduservice.service.SubjectService;
-import com.chz.utils.ResponseBo;
+import com.chz.response.ResponseBo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

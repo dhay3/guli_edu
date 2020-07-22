@@ -1,7 +1,7 @@
 package com.chz.eduservice.entity.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
-import com.chz.utils.statuscode.CourseStatus;
+import com.chz.statuscode.CourseStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

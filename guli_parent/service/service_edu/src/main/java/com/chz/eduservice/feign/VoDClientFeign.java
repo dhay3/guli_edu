@@ -1,6 +1,6 @@
 package com.chz.eduservice.feign;
 
-import com.chz.utils.ResponseBo;
+import com.chz.response.ResponseBo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.DeleteMapping;

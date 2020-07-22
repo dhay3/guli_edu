@@ -6,7 +6,7 @@ import com.chz.eduservice.entity.vo.CourseQuery;
 import com.chz.eduservice.service.CourseService;
 import com.chz.eduservice.service.SubjectService;
 import com.chz.eduservice.service.TeacherService;
-import com.chz.utils.statuscode.CourseStatus;
+import com.chz.statuscode.CourseStatus;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

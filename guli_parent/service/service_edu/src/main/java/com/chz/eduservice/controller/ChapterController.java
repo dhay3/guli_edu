@@ -4,7 +4,7 @@ package com.chz.eduservice.controller;
 import com.chz.eduservice.entity.domain.Chapter;
 import com.chz.eduservice.entity.vo.ChapterVo;
 import com.chz.eduservice.service.ChapterService;
-import com.chz.utils.ResponseBo;
+import com.chz.response.ResponseBo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

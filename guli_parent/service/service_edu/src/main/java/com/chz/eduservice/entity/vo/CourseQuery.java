@@ -1,6 +1,6 @@
 package com.chz.eduservice.entity.vo;
 
-import com.chz.utils.statuscode.CourseStatus;
+import com.chz.statuscode.CourseStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
