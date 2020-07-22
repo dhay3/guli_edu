@@ -3,6 +3,8 @@ package com.chz.vod.service;
 import com.aliyuncs.exceptions.ClientException;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 /**
  * @Author: CHZ
  * @DateTime: 2020/7/17 21:05
@@ -11,5 +13,12 @@ import org.springframework.web.multipart.MultipartFile;
 public interface VoDService {
     String uploadByVoD(MultipartFile file);
 
-    void deleteVoDByVideoId(String videoId) throws ClientException;
+    void deleteVoDByVideoSourceId(String videoId) throws ClientException;
+
+    /**
+     * 批量删除aliyun上的视频
+     *
+     * @param videoIds
+     */
+    void deleteBatchVoDByVideoSourceId(List<String> videoIds) throws ClientException;
 }

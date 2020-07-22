@@ -4,21 +4,21 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.chz.eduservice.entity.domain.Video">
-        <id column="id" property="id" />
-        <result column="course_id" property="courseId" />
-        <result column="chapter_id" property="chapterId" />
-        <result column="title" property="title" />
-        <result column="video_source_id" property="videoSourceId" />
-        <result column="video_original_name" property="videoOriginalName" />
-        <result column="sort" property="sort" />
-        <result column="play_count" property="playCount" />
-        <result column="is_free" property="free" />
-        <result column="duration" property="duration" />
-        <result column="status" property="status" />
-        <result column="size" property="size" />
-        <result column="version" property="version" />
-        <result column="gmt_create" property="gmtCreate" />
-        <result column="gmt_modified" property="gmtModified" />
+        <id column="id" property="id"/>
+        <result column="course_id" property="courseId"/>
+        <result column="chapter_id" property="chapterId"/>
+        <result column="title" property="title"/>
+        <result column="video_source_id" property="videoSourceId"/>
+        <result column="video_original_name" property="videoOriginalName"/>
+        <result column="sort" property="sort"/>
+        <result column="play_count" property="playCount"/>
+        <result column="is_free" property="free"/>
+        <result column="duration" property="duration"/>
+        <result column="status" property="status"/>
+        <result column="size" property="size"/>
+        <result column="version" property="version"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->

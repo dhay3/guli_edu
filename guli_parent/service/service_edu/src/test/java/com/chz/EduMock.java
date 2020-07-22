@@ -40,11 +40,11 @@ public class EduMock {
     public void testList() throws Exception {
         mockMvc.perform(get("/eduservice/teacher"));
     }
+
     @Test
-    public void test(){
+    public void test() {
         System.out.println(CourseStatus.Normal);
     }
-    
 
 
 }

@@ -50,3 +50,7 @@ mybatis-plus:
 #    root: info
 #  file:
 #    path: log/edu.log
+feign: #开启熔断机制
+  hystrix:
+    enabled: true
+    #设置hystrix超时时间, 默认1000ms

@@ -171,7 +171,7 @@ public class generator {
                 //数据库表 字段 映射到实体类的命名策略
                 .setColumnNaming(NamingStrategy.underline_to_camel)
                 //设置想要生成的表
-                .setInclude("edu_course","edu_course_description","edu_teacher","edu_video","edu_chapter")
+                .setInclude("edu_course", "edu_course_description", "edu_teacher", "edu_video", "edu_chapter")
                 //生成的dao,service,entity不再带tbl_前缀
                 .setTablePrefix("edu_")
                 //设置lombok, @Accessor(chain = true),@Data等
@@ -212,7 +212,6 @@ public class generator {
         //执行
         autoGenerator.execute();
     }
-
 
 
 }

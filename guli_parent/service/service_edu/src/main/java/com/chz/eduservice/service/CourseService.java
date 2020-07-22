@@ -6,6 +6,9 @@ import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
 import com.chz.eduservice.entity.vo.CourseQuery;
+import org.springframework.cache.annotation.Cacheable;
+
+import java.util.List;
 
 /**
  * <p>
@@ -54,8 +57,17 @@ public interface CourseService extends IService<Course> {
 
     /**
      * 根据课程courseId删除课程
-     * @return
+     *
      * @param courseId
+     * @return
      */
     boolean removeCourseById(String courseId);
+
+    /**
+     * 查询前八热门课程
+     *
+     * @return
+     */
+    @Cacheable(value = "teacherList", keyGenerator = "keyGenerator")
+    List<Course> getTopCoursesDESC();
 }

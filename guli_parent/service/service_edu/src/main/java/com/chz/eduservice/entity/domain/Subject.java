@@ -22,10 +22,10 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("edu_subject")
-@ApiModel(value="Subject对象", description="课程科目")
+@ApiModel(value = "Subject对象", description = "课程科目")
 public class Subject implements Serializable {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "课程类别ID")
     @TableId(value = "id", type = IdType.ASSIGN_ID)

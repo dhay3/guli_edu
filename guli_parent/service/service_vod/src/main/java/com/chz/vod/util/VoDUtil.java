@@ -34,6 +34,7 @@ public class VoDUtil {
 
     /**
      * 初始化vod方法
+     *
      * @return
      * @throws ClientException
      */

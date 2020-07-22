@@ -4,6 +4,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.chz.eduservice.entity.domain.Teacher;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.chz.eduservice.entity.vo.TeacherQuery;
+import org.springframework.cache.annotation.Cacheable;
+
+import java.util.List;
 
 /**
  * <p>
@@ -25,4 +28,11 @@ public interface TeacherService extends IService<Teacher> {
      * @return
      */
     IPage<Teacher> pageTeacherCondition(Integer currentPage, Integer pageSize, TeacherQuery teacherQuery);
+
+    /**
+     * 获取id排序前四的讲师
+     * @return
+     */
+    @Cacheable(value = "teacherList",keyGenerator = "keyGenerator")
+    List<Teacher> getTopTeachersDESC();
 }

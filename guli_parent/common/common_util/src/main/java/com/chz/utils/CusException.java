@@ -13,10 +13,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class CusException extends RuntimeException{
+public class CusException extends RuntimeException {
     @ApiModelProperty("错误异常码")
     private Integer errorCode;
-    public CusException(String message,Integer errorCode) {
+
+    public CusException(String message, Integer errorCode) {
         super(message);
         this.errorCode = errorCode;
     }

@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * @Author: CHZ
@@ -46,13 +45,13 @@ public class DBTest {
         System.out.println(page.getTotal());
         page.getRecords().forEach(System.out::println);
     }
+
     @Test
-    void testSubject(){
-        ArrayList<Integer> integers = new ArrayList<>();
-        integers.add(1);
-        integers.add(2);
-        integers.add(3);
-        Arrays.stream(integers.toArray()).forEach(System.out::println);
+    void testSubject() {
+        ArrayList<String> integers = new ArrayList<>();
+        //集合的泛型必须是CharSequence的
+        String join = String.join(",", integers);
+        System.out.println(join);
     }
 
 }

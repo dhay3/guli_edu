@@ -16,3 +16,5 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 #nacos注册与发现
+
+

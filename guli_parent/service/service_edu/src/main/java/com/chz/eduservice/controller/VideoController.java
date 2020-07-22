@@ -4,7 +4,9 @@ package com.chz.eduservice.controller;
 import com.chz.eduservice.entity.domain.Video;
 import com.chz.eduservice.feign.VoDClientFeign;
 import com.chz.eduservice.service.VideoService;
+import com.chz.utils.CusException;
 import com.chz.utils.ResponseBo;
+import com.chz.utils.statuscode.ResultCode;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -64,8 +66,12 @@ public class VideoController {
         Video video = videoService.getById(videoId);
         String videoSourceId = video.getVideoSourceId();
         if (!StringUtils.isEmpty(videoSourceId)) {
-            //远程调用删除视频
-            voDClientFeign.deleteVoDByVideoId(videoSourceId);
+            //远程调用删除视频, 这里能拿到api返回的值
+            //这里如果服务的熔断器被调用,返回的结果就是error
+            ResponseBo res = voDClientFeign.deleteVoDByVideoSourceId(videoSourceId);
+            if (res.getCode() == ResultCode.ERROR.val()) {
+                throw new CusException("熔断器触发, 删除视频失败", ResultCode.ERROR.val());
+            }
         }
         videoService.removeById(videoId);
         return ResponseBo.ok();

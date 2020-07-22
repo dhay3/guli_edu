@@ -98,12 +98,13 @@ public class CourseController {
                                             @RequestBody CourseQuery courseQuery) {
         HashMap<String, Object> map = new HashMap<>();
         Page<CoursePublishInfoVo> page = courseService.pageCourseAllInfo(curPage, pageSize, courseQuery);
-        map.put("courses",page.getRecords());
-        map.put("total",page.getTotal());
+        map.put("courses", page.getRecords());
+        map.put("total", page.getTotal());
         return ResponseBo.ok().data("info", map);
     }
+
     @DeleteMapping("/{courseId}")
-    public ResponseBo deleteCourseById(@PathVariable String courseId){
+    public ResponseBo deleteCourseById(@PathVariable String courseId) {
         courseService.removeCourseById(courseId);
         return ResponseBo.ok();
     }

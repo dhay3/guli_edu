@@ -16,7 +16,6 @@ import java.util.List;
 public interface SubjectMapper extends BaseMapper<Subject> {
 
     /**
-     *
      * @param title
      * @return
      */

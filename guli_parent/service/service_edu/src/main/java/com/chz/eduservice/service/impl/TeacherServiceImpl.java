@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
+import java.util.List;
+
 /**
  * <p>
  * 讲师 服务实现类
@@ -53,5 +55,17 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
         //结果会封装进teacherPage, 无需返回
         baseMapper.selectPage(teacherPage, wrapper);
         return teacherPage;
+    }
+
+    /**
+     * 按照id查询排名前四的讲师
+     *
+     * @return
+     */
+    @Override
+    public List<Teacher> getTopTeachersDESC() {
+        List<Teacher> teachers = baseMapper.selectList(new QueryWrapper<Teacher>().lambda()
+                .orderByDesc(Teacher::getId).last("limit 4"));
+        return teachers;
     }
 }

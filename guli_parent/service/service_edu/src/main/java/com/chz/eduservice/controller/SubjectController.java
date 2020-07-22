@@ -46,13 +46,14 @@ public class SubjectController {
 
     /**
      * 根据一级的title,获取所有的二级title
+     *
      * @param title
      * @return
      */
     @GetMapping("/{title}")
-    public ResponseBo getSubjectByTitle(@PathVariable String title){
+    public ResponseBo getSubjectByTitle(@PathVariable String title) {
         List<String> list = subjectService.getSubTitlesByParentTitle(title);
-        return ResponseBo.ok().data("titles",list);
+        return ResponseBo.ok().data("titles", list);
     }
 }
 

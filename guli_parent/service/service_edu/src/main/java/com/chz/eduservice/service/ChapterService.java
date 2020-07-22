@@ -16,7 +16,6 @@ import java.util.List;
  */
 public interface ChapterService extends IService<Chapter> {
     /**
-     *
      * @param id 根据课程的id获取对应的所有信息
      * @return 返回封装对应关系的vo层
      */
@@ -25,6 +24,7 @@ public interface ChapterService extends IService<Chapter> {
     /**
      * 删除章节
      * 如果章节下面有小节, 不能删除章节, 只有章节下没有小节才能删除
+     *
      * @param id
      * @return
      */

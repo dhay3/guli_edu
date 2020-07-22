@@ -1,4 +1,4 @@
-package com.chz.eduservice.config;
+package com.chz.servicebase.config;
 
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -21,7 +21,7 @@ public class JacksonConfig {
     @Value("${spring.jackson.time-zone}")
     private String timeZone;
 
-//    @Bean
+    //    @Bean
     public LocalDateTimeSerializer serializer() {
         return new LocalDateTimeSerializer(DateTimeFormatter.ofPattern(pattern));
     }

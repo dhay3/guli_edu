@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * @Author: CHZ
@@ -77,13 +78,29 @@ public class VoDServiceImpl implements VoDService {
     /**
      * 根据videoId删除aliyun中上传的视频
      *
-     * @param videoId
+     * @param videoSourceId
      */
     @Override
-    public void deleteVoDByVideoId(String videoId) throws ClientException {
+    public void deleteVoDByVideoSourceId(String videoSourceId) throws ClientException {
         DefaultAcsClient defaultAcsClient = VoDUtil.initVodClient();
         DeleteVideoRequest request = new DeleteVideoRequest();
-        request.setVideoIds(videoId);
+        request.setVideoIds(videoSourceId);
+        defaultAcsClient.getAcsResponse(request);
+    }
+
+    /**
+     * 根据给出的id批量删除aliyun上的视频
+     *
+     * @param videoSourceIds
+     * @throws ClientException
+     */
+    @Override
+    public void deleteBatchVoDByVideoSourceId(List<String> videoSourceIds) throws ClientException {
+        DefaultAcsClient defaultAcsClient = VoDUtil.initVodClient();
+        DeleteVideoRequest request = new DeleteVideoRequest();
+        String param = String.join(",", videoSourceIds);
+        //注意该方法不是可变参数,而是使用字符串拼接的
+        request.setVideoIds(param);
         defaultAcsClient.getAcsResponse(request);
     }
 }

@@ -1,5 +1,6 @@
 package com.chz.eduservice.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chz.eduservice.entity.domain.Course;
@@ -7,7 +8,8 @@ import com.chz.eduservice.entity.domain.CourseDescription;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
 import com.chz.eduservice.entity.vo.CourseQuery;
-import com.chz.eduservice.mapper.*;
+import com.chz.eduservice.mapper.CourseDescriptionMapper;
+import com.chz.eduservice.mapper.CourseMapper;
 import com.chz.eduservice.service.ChapterService;
 import com.chz.eduservice.service.CourseService;
 import com.chz.eduservice.service.SubjectService;
@@ -18,7 +20,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Objects;
+import java.util.List;
 
 /**
  * <p>
@@ -90,7 +92,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         //右description的id就是课程的id是同一个所有可以通过byId查询
         CourseDescription courseDescription = courseDescriptionService.selectById(courseId);
         //有可能存在数据库中的描述信息为null, 需要判断
-        courseInfoVo.setDescription(courseDescription == null?null:courseDescription.getDescription());
+        courseInfoVo.setDescription(courseDescription == null ? null : courseDescription.getDescription());
         return courseInfoVo;
     }
 
@@ -130,7 +132,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     @Override
     public Page<CoursePublishInfoVo> pageCourseAllInfo(Integer cur, Integer size, CourseQuery courseQuery) {
         Page<CoursePublishInfoVo> page = new Page<>(cur, size);
-        //将带条件的查询结果封装到page中,作为page中的数据
+        //将带条件的查询结果封装到page中,作为page中的数据,查询出来的一条结果封装到CoursePublishInfoVo中
         page.setRecords(baseMapper.pageCourseAllInfo(page, courseQuery));
         return page;
     }
@@ -150,7 +152,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         chapterService.deleteChapterByCourseId(courseId);
         //根据课程id删除描述
         courseDescriptionService.deleteById(courseId);
-        //根据课程id删除本身, 删除
+        //根据课程id删除本身, 逻辑删除
         baseMapper.deleteById(courseId);
         return true;
     }
@@ -165,4 +167,15 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 //    private <T> LambdaQueryWrapper<T> getWrapper(Class<T> target) {
 //        return new QueryWrapper<T>().lambda();
 //    }
+
+    /**
+     * 查询观看书排名前八的课程
+     *
+     * @return
+     */
+    public List<Course> getTopCoursesDESC() {
+        List<Course> courses = baseMapper.selectList(new QueryWrapper<Course>().lambda()
+                .orderByDesc(Course::getViewCount).last("limit 8"));
+        return courses;
+    }
 }

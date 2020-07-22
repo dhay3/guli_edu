@@ -29,7 +29,7 @@ public interface CourseMapper extends BaseMapper<Course> {
     /**
      * 按条件分页查询course
      *
-     * @param page 注意这里必须要有Page对象,否则mp无法完成分页查询
+     * @param page        注意这里必须要有Page对象,否则mp无法完成分页查询
      * @param courseQuery
      * @return
      */

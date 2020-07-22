@@ -22,10 +22,10 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("edu_course_description")
-@ApiModel(value="CourseDescription对象", description="课程简介")
+@ApiModel(value = "CourseDescription对象", description = "课程简介")
 public class CourseDescription implements Serializable {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
     /**
      * IdType.INPUT 需要用户手动填充, 不会自动生成
      */

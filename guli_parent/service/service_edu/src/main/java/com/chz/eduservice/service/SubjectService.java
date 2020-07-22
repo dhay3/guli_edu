@@ -25,8 +25,9 @@ public interface SubjectService extends IService<Subject> {
 
     /**
      * 根据父级课程title, 获取所有子级title
-     * @return
+     *
      * @param title
+     * @return
      */
     List<String> getSubTitlesByParentTitle(String title);
 }
