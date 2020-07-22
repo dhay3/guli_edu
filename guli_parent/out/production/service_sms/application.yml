@@ -1,0 +1,55 @@
+server:
+  port: 8005
+spring:
+  application:
+    name: service-sms
+  profiles:
+    active: dev
+    #数据源
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:mysql://localhost:3306/gedu?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 12345
+    type: com.zaxxer.hikari.HikariDataSource #使用内置的数据源, 号称最快
+    hikari:
+      minimum-idle: 5 #最小闲置数 同 min-idle
+      maximum-pool-size: 12 #连接池最大连接数默认10, 同max-active
+      idle-timeout: 500000 #空闲连接最大存活时间, 缺省600000
+      max-lifetime: 54000 #一个连接的生命时长, 超时而且没有被使用则被释放, 缺省600000
+      auto-commit: true #控制从该连接池获取的连接是否自动提交
+      connection-test-query: SELECT 1 #用于校验连接是否有效, druid同validation-query
+      pool-name: HikariPool #出现在日志中的连接池名字
+    #jackson,时间返回的全局格式, 不会对LocalDateTime生效
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    #nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        #redis配置
+  redis:
+    database: 0 #redis数据库索引, 默认 0
+    host: localhost #ip 默认localhost
+    port: 6379 #端口 默认6379
+    lettuce: #使用lettuce客户端线程安全, jedis线程不安全
+      pool:
+        max-active: 8
+        max-wait: -1 #-1表示无限制
+        max-idle: 8
+        min-idle: 0 #为0表示不会主动创建连接
+#    timeout: 0 #超过指定时间抛出异常
+    #mybatis-plus
+mybatis-plus:
+  #  configuration:
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启log日志
+  global-config:
+    db-config:
+      logic-delete-field: deleted #逻辑删除
+      logic-delete-value: 1 #已删除的值, 默认1
+      logic-not-delete-value: 0 #未删除的, 默认0
+  #配置xml扫描, classpath对应的当前模块
+  mapper-locations:
+    - classpath:com/chz/edusmc/mapper/xml/*.xml
