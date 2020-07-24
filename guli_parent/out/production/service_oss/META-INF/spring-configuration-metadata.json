@@ -2,8 +2,8 @@
   "groups": [
     {
       "name": "aliyun.oss.file",
-      "type": "com.chz.uitls.OssUtils",
-      "sourceType": "com.chz.uitls.OssUtils"
+      "type": "com.chz.oss.uitls.OssUtils",
+      "sourceType": "com.chz.oss.uitls.OssUtils"
     }
   ],
   "properties": [],

@@ -42,7 +42,7 @@ public class SMSServiceImpl implements SMSService {
         //对应签名
         request.putQueryParameter("SignName", "谷粒在线教育");
         //对应模板编码
-        request.putQueryParameter("TemplateCode", "SMS_172887621");
+        request.putQueryParameter("TemplateCode", "SMS_197895424");
 
         //验证码, 这里的value必须使用Json形式, 可以使用objectMapper直接将map转为Json格式
         request.putQueryParameter("TemplateParam", mapper.writeValueAsString(param));

@@ -2,7 +2,7 @@ package com.chz.sms.controller;
 
 import com.chz.response.ResponseBo;
 import com.chz.sms.service.SMSService;
-import com.chz.sms.utils.RandomUtil;
+import com.chz.utils.RandomUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -42,7 +42,7 @@ public class SMSController {
         //如果调用成功就将数据放入redis中
         if (sent) {
             //设置当前key的ttl为5分钟
-            redisTemplate.opsForValue().set(phoneNumber, code, 5, TimeUnit.SECONDS);
+            redisTemplate.opsForValue().set(phoneNumber, code, 40, TimeUnit.MINUTES);
             return ResponseBo.ok().data("code",code);
         } else {
             return ResponseBo.error().message("短信发送失败");

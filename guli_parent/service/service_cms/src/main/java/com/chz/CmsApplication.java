@@ -13,7 +13,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableCaching//开启缓存
 @EnableDiscoveryClient
 @SpringBootApplication(
-        scanBasePackages = {"com.chz.edusmc", "com.chz.servicebase"})
+        scanBasePackages = {"com.chz.educms", "com.chz.servicebase"})
 public class CmsApplication {
     public static void main(String[] args) {
         SpringApplication.run(CmsApplication.class, args);

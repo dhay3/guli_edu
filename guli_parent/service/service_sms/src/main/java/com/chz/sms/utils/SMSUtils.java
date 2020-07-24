@@ -3,6 +3,7 @@ package com.chz.sms.utils;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
 import com.aliyuncs.profile.DefaultProfile;
+import com.chz.utils.AliyunUtils;
 
 /**
  * @Author: CHZ

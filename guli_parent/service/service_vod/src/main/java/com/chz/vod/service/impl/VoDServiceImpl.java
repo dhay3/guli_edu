@@ -6,7 +6,7 @@ import com.aliyun.vod.upload.resp.UploadStreamResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
-import com.chz.sms.utils.AliyunUtils;
+import com.chz.utils.AliyunUtils;
 import com.chz.vod.service.VoDService;
 import com.chz.vod.util.VoDUtil;
 import org.springframework.stereotype.Service;
