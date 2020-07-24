@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "wx.open",
+      "type": "com.chz.edumember.utils.WechatUtils",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
