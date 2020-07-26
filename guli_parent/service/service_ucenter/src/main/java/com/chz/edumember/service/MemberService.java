@@ -1,7 +1,7 @@
 package com.chz.edumember.service;
 
-import com.chz.edumember.entity.Member;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.chz.edumember.entity.Member;
 import com.chz.edumember.entity.vo.MemberLoginVo;
 import com.chz.edumember.entity.vo.MemberRegisterVo;
 
@@ -18,4 +18,15 @@ public interface MemberService extends IService<Member> {
     String login(MemberLoginVo member);
 
     boolean register(MemberRegisterVo member);
+
+
+    /**
+     * 检查数据库中是否有wechat用户
+     * @param openid
+     * @return
+     */
+    Member checkWechatUserByOpenId(String openid);
+
+    Member saveWechatUserIfNotExist(String openid, String access_token);
+
 }

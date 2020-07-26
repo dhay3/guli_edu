@@ -23,8 +23,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Api("用户模块")
 @RestController
-@CrossOrigin
-@RequestMapping("/edumember/member")
+@RequestMapping("/api/ucenter")
 public class MemberController {
     @Autowired
     private MemberService memberService;
@@ -49,6 +48,7 @@ public class MemberController {
      */
     @GetMapping("/token")
     public ResponseBo getUserInfoByToken(HttpServletRequest request) {
+        System.out.println(request.getHeader("token"));
         //调用jwt工具类获取header中的token
         String memberId = JwtUtils.getMemberIdByJwtToken(request);
         //根据用户id获取用户信息

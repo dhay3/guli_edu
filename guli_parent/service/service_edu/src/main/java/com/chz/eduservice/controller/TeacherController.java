@@ -28,8 +28,8 @@ import java.util.List;
 @Api("教师接口")
 @Validated
 @RestController
-//允许跨域请求
-@CrossOrigin(origins = "http://localhost:9528")
+//允许跨域请求,通过配置类统一配置
+//@CrossOrigin(origins = "http://localhost:9528")
 @RequestMapping("/eduservice/teacher")
 public class TeacherController {
     @Autowired

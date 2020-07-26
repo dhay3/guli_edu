@@ -5,12 +5,14 @@ import com.aliyun.oss.OSSClientBuilder;
 import com.chz.utils.AliyunUtils;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+@Data
 @ApiModel("oss工具类")
 @Component //要想自动配置必须通过@Component注入到ioc,@EnableConfigurationProperties无法使用
 @PropertySource("classpath:oss-config.properties")
@@ -24,8 +26,6 @@ public class OssUtils {
 
     public static String END_POINT;
     public static String BUCKET_NAME;
-
-
 
 
     /**
@@ -52,7 +52,7 @@ public class OssUtils {
         return ossClient;
     }
 
-    public static String  getEndpoint() {
+    public static String getEndpoint() {
         return END_POINT;
     }
 

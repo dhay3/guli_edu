@@ -11,13 +11,17 @@ import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.junit.jupiter.api.Test;
 
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 public class Generator {
+
     @Test
     public void test() {
         //对应得到模块所在的路径
         System.out.println(System.getProperty("user.dir"));
+        String format = new DecimalFormat("#").format(Double.valueOf("1.0"));
+        System.out.println(format);
     }
 
     @Test

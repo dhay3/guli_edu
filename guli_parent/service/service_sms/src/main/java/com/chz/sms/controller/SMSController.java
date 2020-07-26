@@ -31,7 +31,7 @@ public class SMSController {
         //从redis中获取验证码, 如果能直接获取到就直接返回
         Object codeInRedis = redisTemplate.opsForValue().get(phoneNumber);
         if (!ObjectUtils.isEmpty(codeInRedis)) {
-            return ResponseBo.ok();
+            return ResponseBo.ok().data("code", codeInRedis);
         }
         //如果redis中没有生成随机验证码, 传给aliyun进行短信发送服务
         String code = RandomUtil.getFourBitRandom();
@@ -43,7 +43,7 @@ public class SMSController {
         if (sent) {
             //设置当前key的ttl为5分钟
             redisTemplate.opsForValue().set(phoneNumber, code, 40, TimeUnit.MINUTES);
-            return ResponseBo.ok().data("code",code);
+            return ResponseBo.ok().data("code", code);
         } else {
             return ResponseBo.error().message("短信发送失败");
         }
