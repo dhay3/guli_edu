@@ -34,7 +34,7 @@ public class ChapterController {
     @GetMapping("/{courseId}")
     //这里的@PathVariable("courseId")可以不写也可以写,本项目统一写
     public ResponseBo getChapterAndVideoById(@PathVariable("courseId") String courseId) {
-        List<ChapterVo> chapters = chapterService.getChapterAndVideoById(courseId);
+        List<ChapterVo> chapters = chapterService.getChapterAndVideoByCourseId(courseId);
         return ResponseBo.ok().data("chapters", chapters);
     }
 

@@ -1,4 +1,4 @@
-package com.chz.eduservice.entity.vo;
+package com.chz.eduservice.entity.query;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

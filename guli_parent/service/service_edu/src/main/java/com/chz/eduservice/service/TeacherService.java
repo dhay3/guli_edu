@@ -1,12 +1,14 @@
 package com.chz.eduservice.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.chz.eduservice.entity.domain.Teacher;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.chz.eduservice.entity.vo.TeacherQuery;
+import com.chz.eduservice.entity.query.TeacherQuery;
 import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -35,4 +37,6 @@ public interface TeacherService extends IService<Teacher> {
      */
     @Cacheable(value = "teacherList",keyGenerator = "keyGenerator")
     List<Teacher> getTopTeachersDESC();
+
+    Map<String, Object> pageTeachersFront(Page<Teacher> page);
 }

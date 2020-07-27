@@ -5,7 +5,9 @@ import com.chz.exception.CusException;
 import com.chz.response.ResponseBo;
 import com.chz.statuscode.ResultCode;
 import com.chz.vod.service.VoDService;
+import com.chz.vod.util.VoDUtil;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -67,5 +69,19 @@ public class VoDController {
             throw new CusException("删除视频失败", ResultCode.ERROR.val());
         }
         return ResponseBo.ok();
+    }
+
+    @ApiOperation(value = "根据视频id获取相关视频playauth", notes = "注意playAuth会变化")
+    @GetMapping("/{videoId}")
+    public ResponseBo getPlayAuth(@PathVariable String videoId) {
+        System.out.println(videoId);
+        String playAuth = null;
+        try {
+            playAuth = VoDUtil.getPlayAuth(videoId);
+        } catch (ClientException e) {
+            e.printStackTrace();
+            throw new CusException("获取视频playAuth错误", ResultCode.ERROR.val());
+        }
+        return ResponseBo.ok().data("playAuth", playAuth);
     }
 }

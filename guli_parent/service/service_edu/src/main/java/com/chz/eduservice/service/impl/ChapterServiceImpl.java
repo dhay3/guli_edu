@@ -31,11 +31,11 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
     private VideoMapper videoMapper;
 
     /**
-     * @param CourseId 根据课程的id获取对应的所有信息
+     * @param courseId 根据课程的id获取对应的所有信息
      * @return 返回封装对应关系的vo
      */
     @Override
-    public List<ChapterVo> getChapterAndVideoById(String CourseId) {
+    public List<ChapterVo> getChapterAndVideoByCourseId(String courseId) {
         //由于chapterId不同第一种方法需要访问多次数据库
         //查询对应courseId所有的chapter
 //        List<Chapter> chapters = baseMapper.selectList(new QueryWrapper<Chapter>().lambda()
@@ -59,14 +59,14 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
 //            chapterVo.setChildren(videoVoList);
 //            chapterVoList.add(chapterVo);
 //        }
-
+        //返回的结果
+        final ArrayList<ChapterVo> chapterVoList = new ArrayList<>();
         //查询chapter表对应courseId的所有结果集
         final List<Chapter> chapters = baseMapper.selectList(new QueryWrapper<Chapter>().lambda()
-                .eq(Chapter::getCourseId, CourseId));
-        final ArrayList<ChapterVo> chapterVoList = new ArrayList<>();
+                .eq(Chapter::getCourseId, courseId));
         //查询video表对应courseId的所有结果集
         List<Video> videos = videoMapper.selectList(new QueryWrapper<Video>().lambda()
-                .eq(Video::getCourseId, CourseId));
+                .eq(Video::getCourseId, courseId));
         chapters.forEach(chapter -> {
             ChapterVo chapterVo = new ChapterVo();
             BeanUtils.copyProperties(chapter, chapterVo);

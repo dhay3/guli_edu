@@ -1,4 +1,4 @@
-package com.chz.eduservice.entity.vo;
+package com.chz.eduservice.entity.query;
 
 import com.chz.statuscode.CourseStatus;
 import io.swagger.annotations.ApiModel;

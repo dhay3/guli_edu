@@ -3,12 +3,15 @@ package com.chz.eduservice.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.chz.eduservice.entity.domain.Course;
+import com.chz.eduservice.entity.frontVo.CourseWebVo;
+import com.chz.eduservice.entity.frontVo.FrontCourseQueryVo;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
-import com.chz.eduservice.entity.vo.CourseQuery;
+import com.chz.eduservice.entity.query.CourseQuery;
 import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -70,4 +73,14 @@ public interface CourseService extends IService<Course> {
      */
     @Cacheable(value = "teacherList", keyGenerator = "keyGenerator")
     List<Course> getTopCoursesDESC();
+
+    Map<String, Object> getFrontCoursesByCondition(Page<Course> coursePage, FrontCourseQueryVo frontCourseQueryVo);
+
+    /**
+     * 查询course的详细信息
+     * @param courseId
+     * @return
+     */
+    CourseWebVo getFrontCourseDetailsByCourseId(String courseId);
+
 }

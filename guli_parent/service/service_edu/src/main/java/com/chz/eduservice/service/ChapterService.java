@@ -16,10 +16,10 @@ import java.util.List;
  */
 public interface ChapterService extends IService<Chapter> {
     /**
-     * @param id 根据课程的id获取对应的所有信息
+     * @param courseId 根据课程的id获取对应的所有信息
      * @return 返回封装对应关系的vo层
      */
-    List<ChapterVo> getChapterAndVideoById(String id);
+    List<ChapterVo> getChapterAndVideoByCourseId(String courseId);
 
     /**
      * 删除章节

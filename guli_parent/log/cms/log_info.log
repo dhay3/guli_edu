@@ -8892,3 +8892,35 @@
 2020-07-24 17:30:41.308 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8004 (http) with context path ''
 2020-07-24 17:30:41.426 [restartedMain] INFO  o.s.c.alibaba.nacos.registry.NacosServiceRegistry - nacos registry, service-cms 192.168.1.1:8004 register finished
 2020-07-24 17:30:42.299 [restartedMain] INFO  com.chz.CmsApplication - Started CmsApplication in 11.386 seconds (JVM running for 20.717)
+2020-07-26 17:18:59.232 [restartedMain] INFO  com.chz.CmsApplication - The following profiles are active: dev
+2020-07-26 17:19:00.804 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-26 17:19:00.806 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-26 17:19:00.839 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2020-07-26 17:19:01.179 [restartedMain] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=2f3ef6ba-7653-37be-ac97-9b2b85d42af7
+2020-07-26 17:19:01.369 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConfig' of type [com.chz.servicebase.config.RedisConfig$$EnhancerBySpringCGLIB$$7dca3a86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-26 17:19:01.409 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-26 17:19:01.922 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8004 (http)
+2020-07-26 17:19:01.930 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8004"]
+2020-07-26 17:19:01.931 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-26 17:19:01.931 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-26 17:19:02.049 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-26 17:19:02.049 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2754 ms
+2020-07-26 17:19:03.971 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-26 17:19:03.995 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-26 17:19:04.002 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-26 17:19:04.159 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-26 17:19:05.272 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService
+2020-07-26 17:19:06.836 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-26 17:19:06.875 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-26 17:19:06.973 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-26 17:19:07.330 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8004"]
+2020-07-26 17:19:07.401 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8004 (http) with context path ''
+2020-07-26 17:19:07.420 [restartedMain] INFO  o.s.c.alibaba.nacos.registry.NacosServiceRegistry - nacos registry, service-cms 192.168.1.1:8004 register finished
+2020-07-26 17:19:08.258 [restartedMain] INFO  com.chz.CmsApplication - Started CmsApplication in 11.592 seconds (JVM running for 13.093)
+2020-07-26 17:20:25.665 [http-nio-8004-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-26 17:20:25.666 [http-nio-8004-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-07-26 17:20:25.674 [http-nio-8004-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-07-26 17:20:25.876 [http-nio-8004-exec-4] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2020-07-26 17:20:25.877 [http-nio-8004-exec-4] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-07-26 17:20:26.989 [http-nio-8004-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Starting...
+2020-07-26 17:20:27.746 [http-nio-8004-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool - Start completed.

@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.chz.eduservice.entity.domain.Teacher;
-import com.chz.eduservice.entity.vo.TeacherQuery;
+import com.chz.eduservice.entity.query.TeacherQuery;
 import com.chz.eduservice.service.TeacherService;
 import com.chz.response.ResponseBo;
 import io.swagger.annotations.*;

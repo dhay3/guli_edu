@@ -24,7 +24,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/eduservice/front")
-public class FrontController {
+public class FrontIndexController {
     @Autowired
     private TeacherService teacherService;
 
@@ -38,5 +38,6 @@ public class FrontController {
         List<Course> courses = courseService.getTopCoursesDESC();
         return ResponseBo.ok().data("teachers", teachers).data("courses", courses);
     }
+
 
 }

@@ -17,4 +17,6 @@ public class VideoVo {
     private String id;
     @ApiModelProperty("视频标题")
     private String title;
+    @ApiModelProperty("aliyun中的视频id")
+    private String videoSourceId;
 }

@@ -3,6 +3,8 @@ package com.chz.vod.util;
 import com.aliyun.oss.ClientException;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.profile.DefaultProfile;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import com.chz.utils.AliyunUtils;
 
 /**
@@ -12,7 +14,7 @@ import com.chz.utils.AliyunUtils;
  */
 //public class VoDUtil implements InitializingBean {
 public class VoDUtil {
-    private static final String REGION_ID = "shanghai";// 点播服务接入区域
+    private static final String REGION_ID = "cn-shanghai";// 点播服务接入区域
 
     /**
      * 初始化vod方法
@@ -25,5 +27,19 @@ public class VoDUtil {
                 AliyunUtils.KEY_ID,
                 AliyunUtils.KEY_SECRET);
         return new DefaultAcsClient(profile);
+    }
+
+    /**
+     * 获取视频播放凭证, 靠凭证观看视频
+     * 注意凭证会变
+     *
+     * @return
+     */
+    public static String getPlayAuth(String videoId) throws com.aliyuncs.exceptions.ClientException {
+        DefaultAcsClient client = initVodClient();
+        GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
+        request.setVideoId(videoId);
+        GetVideoPlayAuthResponse response = client.getAcsResponse(request);
+        return response.getPlayAuth();
     }
 }

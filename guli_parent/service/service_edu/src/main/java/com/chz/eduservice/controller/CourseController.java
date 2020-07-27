@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
-import com.chz.eduservice.entity.vo.CourseQuery;
+import com.chz.eduservice.entity.query.CourseQuery;
 import com.chz.eduservice.service.CourseService;
 import com.chz.response.ResponseBo;
 import com.chz.statuscode.CourseStatus;

@@ -372,3 +372,27 @@
 2020-07-24 15:44:38.756 [http-nio-8005-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
 2020-07-24 15:44:38.876 [http-nio-8005-exec-1] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
 2020-07-24 15:44:38.877 [http-nio-8005-exec-1] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2020-07-26 17:16:53.165 [restartedMain] INFO  com.chz.sms.SMSApplication - The following profiles are active: dev
+2020-07-26 17:16:54.056 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-26 17:16:54.058 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-26 17:16:54.079 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
+2020-07-26 17:16:54.401 [restartedMain] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=efd3f17e-f8a6-3a33-8b80-6cf93468164b
+2020-07-26 17:16:54.536 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-26 17:16:54.933 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8005 (http)
+2020-07-26 17:16:54.942 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8005"]
+2020-07-26 17:16:54.943 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-07-26 17:16:54.943 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-26 17:16:55.096 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-07-26 17:16:55.096 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1837 ms
+2020-07-26 17:16:55.813 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-26 17:16:55.835 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-26 17:16:55.840 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-26 17:16:55.982 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-26 17:16:57.182 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService
+2020-07-26 17:16:58.696 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-07-26 17:16:58.720 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-07-26 17:16:58.760 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-07-26 17:16:58.914 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8005"]
+2020-07-26 17:16:58.939 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8005 (http) with context path ''
+2020-07-26 17:16:58.951 [restartedMain] INFO  o.s.c.alibaba.nacos.registry.NacosServiceRegistry - nacos registry, service-sms 192.168.1.1:8005 register finished
+2020-07-26 17:16:59.633 [restartedMain] INFO  com.chz.sms.SMSApplication - Started SMSApplication in 9.111 seconds (JVM running for 10.665)

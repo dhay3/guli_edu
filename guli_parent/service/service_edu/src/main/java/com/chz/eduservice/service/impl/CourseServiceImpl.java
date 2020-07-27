@@ -1,13 +1,16 @@
 package com.chz.eduservice.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.domain.CourseDescription;
+import com.chz.eduservice.entity.frontVo.CourseWebVo;
+import com.chz.eduservice.entity.frontVo.FrontCourseQueryVo;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
-import com.chz.eduservice.entity.vo.CourseQuery;
+import com.chz.eduservice.entity.query.CourseQuery;
 import com.chz.eduservice.mapper.CourseDescriptionMapper;
 import com.chz.eduservice.mapper.CourseMapper;
 import com.chz.eduservice.service.ChapterService;
@@ -19,8 +22,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -132,6 +138,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     @Override
     public Page<CoursePublishInfoVo> pageCourseAllInfo(Integer cur, Integer size, CourseQuery courseQuery) {
         Page<CoursePublishInfoVo> page = new Page<>(cur, size);
+        //想象不同page方法也是需要传入一个page作为参数
         //将带条件的查询结果封装到page中,作为page中的数据,查询出来的一条结果封装到CoursePublishInfoVo中
         page.setRecords(baseMapper.pageCourseAllInfo(page, courseQuery));
         return page;
@@ -177,5 +184,61 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         List<Course> courses = baseMapper.selectList(new QueryWrapper<Course>().lambda()
                 .orderByDesc(Course::getViewCount).last("limit 8"));
         return courses;
+    }
+
+    /**
+     * 返回到前端的分页信息
+     *
+     * @param coursePage
+     * @param frontCourseQueryVo
+     * @return
+     */
+    @Override
+    public Map<String, Object> getFrontCoursesByCondition(Page<Course> coursePage, FrontCourseQueryVo frontCourseQueryVo) {
+        LambdaQueryWrapper<Course> wrapper = new QueryWrapper<Course>().lambda();
+        String subjectId = frontCourseQueryVo.getSubjectId();
+        String subjectParentId = frontCourseQueryVo.getSubjectParentId();
+        String gmtCreateSort = frontCourseQueryVo.getGmtCreateSort();
+        String priceSort = frontCourseQueryVo.getPriceSort();
+        String buyCountSort = frontCourseQueryVo.getBuyCountSort();
+        //一级分类
+        if (!StringUtils.isEmpty(subjectParentId)) {
+            wrapper.eq(Course::getSubjectParentId, subjectParentId);
+        }
+        //二级分类
+        if (!StringUtils.isEmpty(subjectId)) {
+            wrapper.eq(Course::getSubjectId, subjectId);
+        }
+        //关注度(销量), 让前端传过来一个值, 根据值来判断是否排序
+        if (!StringUtils.isEmpty(buyCountSort)) {
+            wrapper.orderByDesc(Course::getBuyCount);
+        }
+        if (!StringUtils.isEmpty(gmtCreateSort)) {
+            wrapper.orderByDesc(Course::getGmtCreate);
+        }
+        if (!StringUtils.isEmpty(priceSort)) {
+            wrapper.orderByDesc(Course::getPrice);
+        }
+        //按照条件分页查询,将查询的结果放入到page中
+        baseMapper.selectPage(coursePage, wrapper);
+        HashMap<String, Object> params = new HashMap<>();
+        params.put("total", coursePage.getTotal());
+        params.put("records", coursePage.getRecords());
+        params.put("size", coursePage.getSize());
+        params.put("pages", coursePage.getPages());
+        params.put("current", coursePage.getCurrent());
+        params.put("next", coursePage.hasNext());
+        params.put("pre", coursePage.hasPrevious());
+        return params;
+    }
+
+    /**
+     * 根据课程id查询所有课程相关信息, 包括讲师,课程描述,一二级类别
+     * @param courseId
+     * @return
+     */
+    @Override
+    public CourseWebVo getFrontCourseDetailsByCourseId(String courseId) {
+        return baseMapper.getFrontCourseDetailsByCourseId(courseId);
     }
 }

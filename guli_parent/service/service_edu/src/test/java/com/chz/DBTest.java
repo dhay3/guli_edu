@@ -2,7 +2,8 @@ package com.chz;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.chz.eduservice.entity.domain.Teacher;
-import com.chz.eduservice.entity.vo.CourseQuery;
+import com.chz.eduservice.entity.frontVo.CourseWebVo;
+import com.chz.eduservice.entity.query.CourseQuery;
 import com.chz.eduservice.service.CourseService;
 import com.chz.eduservice.service.SubjectService;
 import com.chz.eduservice.service.TeacherService;
@@ -10,8 +11,6 @@ import com.chz.statuscode.CourseStatus;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.ArrayList;
 
 /**
  * @Author: CHZ
@@ -48,10 +47,10 @@ public class DBTest {
 
     @Test
     void testSubject() {
-        ArrayList<String> integers = new ArrayList<>();
-        //集合的泛型必须是CharSequence的
-        String join = String.join(",", integers);
-        System.out.println(join);
+        CourseWebVo frontCourseDetailsByCourseId = courseService.getFrontCourseDetailsByCourseId("101");
+        System.out.println(frontCourseDetailsByCourseId);
     }
+
+
 
 }

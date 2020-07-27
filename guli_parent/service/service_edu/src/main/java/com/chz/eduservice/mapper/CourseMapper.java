@@ -3,8 +3,9 @@ package com.chz.eduservice.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.chz.eduservice.entity.domain.Course;
+import com.chz.eduservice.entity.frontVo.CourseWebVo;
 import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
-import com.chz.eduservice.entity.vo.CourseQuery;
+import com.chz.eduservice.entity.query.CourseQuery;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -35,4 +36,12 @@ public interface CourseMapper extends BaseMapper<Course> {
      */
     List<CoursePublishInfoVo> pageCourseAllInfo(Page<CoursePublishInfoVo> page,
                                                 @Param("courseQuery") CourseQuery courseQuery);
+
+    /**
+     * 根据课程id查询所有课程相关信息, 包括讲师,课程描述,一二级类别
+     *
+     * @param courseId
+     * @return
+     */
+    CourseWebVo getFrontCourseDetailsByCourseId(String courseId);
 }
