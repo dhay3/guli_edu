@@ -4,7 +4,7 @@ export default {
   //查询前四条banner
   getBannersTopDESC() {
     return request({
-      url: `/edusmc/bannercustom`,
+      url: `/educms/bannercustom`,
       method: 'get'
     })
   }
