@@ -4,10 +4,12 @@ package com.chz.edumember.controller;
 import com.chz.edumember.entity.Member;
 import com.chz.edumember.entity.vo.MemberLoginVo;
 import com.chz.edumember.entity.vo.MemberRegisterVo;
+import com.chz.edumember.entity.vo.MemberVo;
 import com.chz.edumember.service.MemberService;
 import com.chz.response.ResponseBo;
 import com.chz.utils.JwtUtils;
 import io.swagger.annotations.Api;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -43,6 +45,7 @@ public class MemberController {
 
     /**
      * 根据header中的token获取用户信息
+     *
      * @param request
      * @return
      */
@@ -56,5 +59,20 @@ public class MemberController {
         System.out.println(member);
         return ResponseBo.ok().data("user", member);
     }
+
+    /**
+     * 根据用户id获取用户信息
+     *
+     * @param userId
+     * @return
+     */
+    @GetMapping("/{userId}")
+    public ResponseBo getUserInfoByUserId(@PathVariable String userId) {
+        Member member = memberService.getById(userId);
+        MemberVo memberVo = new MemberVo();
+        BeanUtils.copyProperties(member, memberVo);
+        return ResponseBo.ok().data("memberVo", memberVo);
+    }
+
 }
 

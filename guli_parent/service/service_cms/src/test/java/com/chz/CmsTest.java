@@ -34,12 +34,7 @@ public class CmsTest {
 
     @Test
     void test() throws SQLException {
-//        System.out.println(dataSource.getConnection());
-//        ResponseBo bannersTopDESC = customController.getBannersTopDESC();
-//        System.out.println(bannersTopDESC.getData());
-//        Integer[] ints = {12, 234, 4512, 1};
-//        Arrays.sort(ints, (a, b) -> b - a);
-//        System.out.println(Arrays.asList(ints));
+
     }
 
     @Test

@@ -26,11 +26,10 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-    #nacos
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: localhost:8848 #nacos注册与发现
   #mybatis-plus
 mybatis-plus:
   #  configuration:
@@ -43,14 +42,3 @@ mybatis-plus:
   #配置xml扫描, classpath对应的当前模块
   mapper-locations:
     - classpath:com/chz/eduservice/mapper/xml/*.xml
-#由logback接管
-#控制台日志级别
-#logging:
-#  level:
-#    root: info
-#  file:
-#    path: log/edu.log
-feign: #开启熔断机制
-  hystrix:
-    enabled: true
-    #设置hystrix超时时间, 默认1000ms

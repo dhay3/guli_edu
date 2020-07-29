@@ -9,11 +9,11 @@ import com.chz.eduservice.entity.domain.Teacher;
 import com.chz.eduservice.entity.query.TeacherQuery;
 import com.chz.eduservice.mapper.TeacherMapper;
 import com.chz.eduservice.service.TeacherService;
+import com.chz.utils.MPUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -76,14 +76,6 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
         LambdaQueryWrapper<Teacher> wrapper = new QueryWrapper<Teacher>().lambda()
                 .orderByDesc(Teacher::getId);
         baseMapper.selectPage(page, wrapper);
-        HashMap<String, Object> params = new HashMap<>();
-        params.put("total", page.getTotal());
-        params.put("records", page.getRecords());
-        params.put("current",page.getCurrent());
-        params.put("size", page.getSize());
-        params.put("pages", page.getPages());
-        params.put("next", page.hasNext());
-        params.put("pre", page.hasPrevious());
-        return params;
+        return MPUtils.getPageInfos(page);
     }
 }

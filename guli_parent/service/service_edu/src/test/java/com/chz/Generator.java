@@ -77,7 +77,7 @@ public class Generator {
                 //数据库表 字段 映射到实体类的命名策略
                 .setColumnNaming(NamingStrategy.underline_to_camel)
                 //设置想要生成的表
-                .setInclude("edu_teacher")
+                .setInclude("edu_comment")
                 //生成的dao,service,entity不再带tbl_前缀
                 .setTablePrefix("edu_")
                 //设置lombok, @Accessor(chain = true),@Data等
@@ -107,7 +107,7 @@ public class Generator {
                 .setService("service")
                 .setController("controller")
                 .setEntity("entity")
-                .setXml("mapper");
+                .setXml("mapper/xml");
 
         //整合配置
         autoGenerator.setPackageInfo(packageConfig)

@@ -21,7 +21,6 @@ import java.util.List;
  */
 @Api("VoD控制器")
 @RestController
-@CrossOrigin
 @RequestMapping("/eduvod/video")
 public class VoDController {
     @Autowired
