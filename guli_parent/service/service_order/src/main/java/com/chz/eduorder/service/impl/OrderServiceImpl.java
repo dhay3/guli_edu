@@ -16,6 +16,7 @@ import org.springframework.util.ObjectUtils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -62,7 +63,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
             order.setTeacherName(courseInfoVoGet.invoke(courseInfoVo, "teacherName").toString());
             order.setCourseCover(courseInfoVoGet.invoke(courseInfoVo, "cover").toString());
             order.setCourseTitle(courseInfoVoGet.invoke(courseInfoVo, "title").toString());
-
+            order.setTotalFee(new BigDecimal(courseInfoVoGet.invoke(courseInfoVo, "price").toString()));
             order.setMemberId(memberId);
             order.setNickname(memberVoGet.invoke(memberVo, "nickname").toString());
             order.setMobile(memberVoGet.invoke(memberVo, "mobile").toString());
