@@ -1,0 +1,182 @@
+2020-07-28 00:14:31.561 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-vod conflict;retry time: 1
+2020-07-28 00:14:31.561 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-vod conflict;retry time: 1
+2020-07-28 00:14:31.584 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-vod conflict;retry time: 2
+2020-07-28 00:14:36.727 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-vod conflict;retry time: 1
+2020-07-28 00:14:36.727 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-vod conflict;retry time: 1
+2020-07-28 17:18:55.936 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:18:55.954 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:38:19.513 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:38:19.517 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:38:35.632 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:38:35.637 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:38:35.839 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 17:40:14.442 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:40:19.589 [ThreadPoolTaskScheduler-1] WARN  com.alibaba.nacos.client.naming - failed to request http://127.0.0.1:8848/nacos/v1/ns/service/list?pageSize=2147483647&groupName=DEFAULT_GROUP&encoding=UTF-8&namespaceId=public&pageNo=1 from 127.0.0.1
+2020-07-28 17:40:19.693 [restartedMain] WARN  com.alibaba.nacos.client.naming - failed to request http://127.0.0.1:8848/nacos/v1/ns/instance?groupName=DEFAULT_GROUP&metadata=%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D&namespaceId=public&port=8001&enable=true&healthy=true&clusterName=DEFAULT&ip=192.168.1.1&weight=1.0&ephemeral=true&serviceName=DEFAULT_GROUP%40%40service-edu&encoding=UTF-8 from 127.0.0.1
+2020-07-28 17:40:22.894 [com.alibaba.nacos.naming.beat.sender] WARN  com.alibaba.nacos.client.naming - failed to request http://127.0.0.1:8848/nacos/v1/ns/instance/beat?beat=%7B%22cluster%22%3A%22DEFAULT%22%2C%22ip%22%3A%22192.168.1.1%22%2C%22metadata%22%3A%7B%22preserved.register.source%22%3A%22SPRING_CLOUD%22%7D%2C%22port%22%3A8001%2C%22scheduled%22%3Atrue%2C%22serviceName%22%3A%22DEFAULT_GROUP%40%40service-edu%22%2C%22weight%22%3A1.0%7D&serviceName=DEFAULT_GROUP%40%40service-edu&encoding=UTF-8&namespaceId=public from 127.0.0.1
+2020-07-28 17:40:41.158 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:40:41.162 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:41:35.955 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-07-28 17:42:40.113 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:42:40.117 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:42:54.318 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-07-28 17:44:20.393 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:44:20.397 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:44:52.192 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-07-28 17:44:52.281 [http-nio-8150-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 17:44:53.539 [http-nio-8150-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Source must not be null]
+2020-07-28 17:44:53.539 [http-nio-8150-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Source must not be null]
+2020-07-28 17:45:27.955 [http-nio-8150-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Source must not be null]
+2020-07-28 17:46:38.220 [http-nio-8150-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.chz.edumember.entity.vo.MemberVo]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.chz.edumember.entity.vo.MemberVo and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.chz.response.ResponseBo["data"]->java.util.HashMap["memberVo"])]
+2020-07-28 17:46:48.339 [http-nio-8150-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class com.chz.edumember.entity.vo.MemberVo]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class com.chz.edumember.entity.vo.MemberVo and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.chz.response.ResponseBo["data"]->java.util.HashMap["memberVo"])]
+2020-07-28 17:47:42.644 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:47:42.648 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:47:42.852 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 17:47:45.794 [http-nio-8150-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 17:48:17.117 [http-nio-8150-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Source must not be null]
+2020-07-28 17:48:17.123 [http-nio-8001-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-07-28 17:49:10.225 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:49:10.233 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:49:35.759 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 17:49:36.599 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:49:36.607 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:49:43.303 [http-nio-8001-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-07-28 17:49:43.373 [http-nio-8150-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 17:52:44.166 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 17:52:44.410 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:54:52.745 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 17:54:53.512 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 17:54:53.516 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:00:43.441 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:00:44.142 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:00:44.147 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:02:26.518 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:02:27.446 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:02:27.452 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:04:47.263 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:04:47.271 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:04:50.163 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:04:50.169 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:04:50.377 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:05:10.666 [http-nio-8150-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 18:10:54.139 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:10:54.278 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:10:57.197 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commentController' defined in file [D:\workspace_for_idea\谷粒学院\guli_parent\out\production\service_edu\com\chz\eduservice\controller\CommentController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [CommentController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2cc77037]
+2020-07-28 18:11:36.413 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:11:36.421 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:11:50.271 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:11:51.005 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:11:51.010 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:12:58.100 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:12:58.734 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:12:58.738 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:14:02.496 [http-nio-8150-exec-4] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 18:16:47.820 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:16:47.827 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:16:55.215 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:16:55.219 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:16:55.417 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:17:13.112 [http-nio-8150-exec-3] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 18:19:29.834 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:19:29.839 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:19:38.732 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:19:38.737 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:19:38.929 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:19:45.264 [http-nio-8150-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 18:19:47.407 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:20:48.771 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:20:48.775 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:22:39.844 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:22:39.848 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:23:19.071 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:23:19.075 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:24:28.957 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:27:07.287 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:27:10.713 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:27:49.106 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:27:52.268 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:27:52.268 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:28:43.247 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:28:46.716 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:28:46.716 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:28:46.716 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:28:46.738 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 2
+2020-07-28 18:34:04.484 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:04.484 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:04.484 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:04.484 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:04.505 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 2
+2020-07-28 18:34:04.505 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 2
+2020-07-28 18:34:04.505 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 2
+2020-07-28 18:34:04.535 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 3
+2020-07-28 18:34:04.535 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 3
+2020-07-28 18:34:04.576 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 4
+2020-07-28 18:34:07.547 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:34:07.633 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 18:34:11.229 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:11.229 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:11.229 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:11.229 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-28 18:34:11.250 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 2
+2020-07-28 18:34:11.250 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 2
+2020-07-28 18:34:11.280 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 3
+2020-07-28 18:35:51.968 [http-nio-8150-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 18:37:26.843 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:37:26.847 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:40:39.119 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:40:42.257 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:40:45.322 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:43:16.091 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:43:16.095 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:44:07.175 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:44:07.179 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:44:18.677 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Source must not be null]
+2020-07-28 18:46:17.509 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:46:17.514 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:51:29.659 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:51:32.645 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:51:36.103 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:56:57.418 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:56:57.422 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:57:14.671 [http-nio-8001-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-07-28 18:59:17.311 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:59:20.493 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:59:23.784 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 18:59:46.515 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 18:59:46.519 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:01:03.616 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:01:03.620 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:09:29.211 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 19:09:32.426 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:09:35.612 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 19:10:58.900 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:10:58.904 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:11:46.234 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:11:50.067 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 19:12:33.257 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 19:12:36.474 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:12:39.979 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 19:12:39.980 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 19:46:35.852 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:46:35.880 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 19:46:56.220 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 20:02:37.076 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 20:02:37.081 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 20:02:40.507 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 20:33:59.853 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 20:33:59.858 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 20:34:00.091 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 21:00:05.529 [http-nio-8001-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-07-28 21:01:38.497 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 21:01:57.875 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 21:03:09.040 [http-nio-8150-exec-6] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 21:07:24.525 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 21:07:28.779 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-edu conflict;retry time: 1
+2020-07-28 21:07:29.540 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 21:31:42.374 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 21:31:42.381 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 21:31:45.248 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 21:31:45.252 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-28 21:31:45.488 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-28 21:32:13.797 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-28 21:32:15.085 [http-nio-8150-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
