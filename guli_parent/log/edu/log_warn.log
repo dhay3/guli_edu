@@ -76,3 +76,30 @@
 2020-07-29 16:49:05.538 [http-nio-8150-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
 2020-07-29 16:50:36.541 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
 2020-07-29 16:50:58.398 [http-nio-8001-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-29 17:12:55.023 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-29 17:12:58.558 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-29 17:12:58.626 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-29 17:13:02.237 [com.alibaba.nacos.naming.push.receiver] WARN  com.alibaba.nacos.client.naming - write DEFAULT_GROUP%40%40service-ucenter conflict;retry time: 1
+2020-07-30 16:17:24.880 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:17:24.888 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:17:27.344 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:17:27.353 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:17:27.583 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-30 16:19:35.495 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:19:35.503 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:19:43.914 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-30 16:19:44.591 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:19:44.596 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 16:22:19.960 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-30 16:22:58.872 [http-nio-8150-exec-2] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
+2020-07-30 16:38:10.612 [http-nio-8001-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.TransientDataAccessResourceException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLException: Zero date value prohibited
+; Zero date value prohibited; nested exception is java.sql.SQLException: Zero date value prohibited]
+2020-07-30 16:40:02.382 [http-nio-8001-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.TransientDataAccessResourceException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLException: Zero date value prohibited
+; Zero date value prohibited; nested exception is java.sql.SQLException: Zero date value prohibited]
+2020-07-30 16:42:03.633 [http-nio-8001-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.TransientDataAccessResourceException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLException: Zero date value prohibited
+; Zero date value prohibited; nested exception is java.sql.SQLException: Zero date value prohibited]
+2020-07-30 16:42:53.320 [http-nio-8001-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.TransientDataAccessResourceException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLException: Zero date value prohibited
+; Zero date value prohibited; nested exception is java.sql.SQLException: Zero date value prohibited]
+2020-07-30 17:10:38.463 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-07-30 17:10:38.745 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-07-30 17:10:49.240 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.

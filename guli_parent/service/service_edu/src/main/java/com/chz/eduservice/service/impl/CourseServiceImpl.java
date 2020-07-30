@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.domain.CourseDescription;
+import com.chz.eduservice.entity.domain.Teacher;
 import com.chz.eduservice.entity.frontVo.CourseWebVo;
 import com.chz.eduservice.entity.frontVo.FrontCourseQueryVo;
 import com.chz.eduservice.entity.vo.CourseInfoVo;
@@ -13,10 +14,7 @@ import com.chz.eduservice.entity.vo.CoursePublishInfoVo;
 import com.chz.eduservice.entity.query.CourseQuery;
 import com.chz.eduservice.mapper.CourseDescriptionMapper;
 import com.chz.eduservice.mapper.CourseMapper;
-import com.chz.eduservice.service.ChapterService;
-import com.chz.eduservice.service.CourseService;
-import com.chz.eduservice.service.SubjectService;
-import com.chz.eduservice.service.VideoService;
+import com.chz.eduservice.service.*;
 import com.chz.exception.CusException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -51,6 +49,8 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     private VideoService videoService;
     @Autowired
     private ChapterService chapterService;
+    @Autowired
+    private TeacherService teacherService;
 
     /**
      * 添加课程信息
@@ -93,7 +93,9 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     public CourseInfoVo getCourseInfoById(String courseId) {
         Course course = baseMapper.selectById(courseId);
         log.info("course:{}", course);
+        Teacher teacher = teacherService.getById(course.getTeacherId());
         CourseInfoVo courseInfoVo = new CourseInfoVo();
+        courseInfoVo.setTeacherName(teacher.getName());
         BeanUtils.copyProperties(course, courseInfoVo);
         //右description的id就是课程的id是同一个所有可以通过byId查询
         CourseDescription courseDescription = courseDescriptionService.selectById(courseId);
@@ -234,6 +236,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * 根据课程id查询所有课程相关信息, 包括讲师,课程描述,一二级类别
+     *
      * @param courseId
      * @return
      */
