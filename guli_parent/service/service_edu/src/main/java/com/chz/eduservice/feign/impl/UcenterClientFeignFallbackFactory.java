@@ -1,5 +1,6 @@
-package com.chz.eduservice.feign;
+package com.chz.eduservice.feign.impl;
 
+import com.chz.eduservice.feign.UcenterClientFeign;
 import com.chz.response.ResponseBo;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;

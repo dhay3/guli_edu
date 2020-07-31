@@ -6,6 +6,8 @@ import com.chz.eduorder.entity.Order;
 import com.chz.eduorder.service.OrderService;
 import com.chz.response.ResponseBo;
 import com.chz.utils.JwtUtils;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author chz
  * @since 2020-07-29
  */
+@Slf4j
 @RestController
 @RequestMapping("/eduorder/order")
 public class OrderController {
@@ -50,6 +53,23 @@ public class OrderController {
         Order order = orderService.getOne(new QueryWrapper<Order>().lambda()
                 .eq(Order::getOrderNo, orderNo));
         return ResponseBo.ok().data("order", order);
+    }
+
+    /**
+     * 根据订单的status
+     * 判断当前用户是否有权限查看课程
+     *
+     * @param courseId
+     * @return
+     */
+    @GetMapping("/check/{courseId}/{memberId}")
+    @ApiOperation(value = "根据用户id和课程id查看order表, 用户是否购买", notes = "status为1表示购买")
+    public ResponseBo getOrderStatusInDB(@PathVariable String courseId, @PathVariable String memberId) {
+        int cnt = orderService.count(new QueryWrapper<Order>().lambda()
+                .eq(Order::getMemberId, memberId)
+                .eq(Order::getCourseId, courseId)
+                .eq(Order::getStatus, 1));
+        return ResponseBo.ok().data("status", cnt);
     }
 }
 

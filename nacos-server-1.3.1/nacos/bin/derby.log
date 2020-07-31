@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Thu Jul 30 16:18:37 CST 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0173-9ecd-3c9a-0000173d3d10 
-on database directory D:\java资料\项目\谷粒学院\我的资料\nacos-server-1.3.1\nacos\data\derby-data with class loader org.springframework.boot.loader.LaunchedURLClassLoader@377dca04 
-Loaded from jar:file:/D:/java资料/项目/谷粒学院/我的资料/nacos-server-1.3.1/nacos/target/nacos-server.jar!/BOOT-INF/lib/derby-10.14.2.0.jar!/
+Fri Jul 31 15:31:53 CST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0173-a3c8-cf71-000024b2aa50 
+on database directory D:\workspace_for_idea\谷粒学院\nacos-server-1.3.1\nacos\data\derby-data with class loader org.springframework.boot.loader.LaunchedURLClassLoader@377dca04 
+Loaded from jar:file:/D:/workspace_for_idea/谷粒学院/nacos-server-1.3.1/nacos/target/nacos-server.jar!/BOOT-INF/lib/derby-10.14.2.0.jar!/
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_211-b12
-user.dir=D:\java资料\项目\谷粒学院\我的资料\nacos-server-1.3.1\nacos\bin
+user.dir=D:\workspace_for_idea\谷粒学院\nacos-server-1.3.1\nacos\bin
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0

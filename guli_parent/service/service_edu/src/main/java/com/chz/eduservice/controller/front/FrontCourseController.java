@@ -5,13 +5,17 @@ import com.chz.eduservice.entity.domain.Course;
 import com.chz.eduservice.entity.frontVo.CourseWebVo;
 import com.chz.eduservice.entity.frontVo.FrontCourseQueryVo;
 import com.chz.eduservice.entity.vo.ChapterVo;
+import com.chz.eduservice.feign.OrderClientFeign;
 import com.chz.eduservice.service.ChapterService;
 import com.chz.eduservice.service.CourseService;
 import com.chz.response.ResponseBo;
+import com.chz.utils.JwtUtils;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +31,8 @@ public class FrontCourseController {
     private CourseService courseService;
     @Autowired
     private ChapterService chapterService;
+    @Autowired
+    private OrderClientFeign orderClientFeign;
 
     @ApiOperation("带条件分页查询")
     @PostMapping("/{currentPage}/{pageSize}")
@@ -39,14 +45,19 @@ public class FrontCourseController {
     }
 
     @GetMapping("/{courseId}")
-    public ResponseBo getFrontCourseDetailsByCourseId(@PathVariable String courseId) {
+    public ResponseBo getFrontCourseDetailsByCourseId(@PathVariable String courseId,
+                                                      HttpServletRequest request) {
+        String memberId = JwtUtils.getMemberIdByJwtToken(request);
         //根据课程id查询课程信息
         CourseWebVo courseWebVo = courseService.getFrontCourseDetailsByCourseId(courseId);
         //根据课程id查询章节和小节
         List<ChapterVo> ChapterVideoList = chapterService.getChapterAndVideoByCourseId(courseId);
-        System.out.println(ChapterVideoList);
+        //根据课程id和用户id查询当前课程是否已经支付过了
+        Object status = orderClientFeign.getOrderStatusInDB(courseId, memberId)
+                .getData();
         return ResponseBo.ok().data("courseWebVo", courseWebVo)
-                .data("ChapterVideoList", ChapterVideoList);
+                .data("ChapterVideoList", ChapterVideoList)
+                .data("status", status);
     }
 
 

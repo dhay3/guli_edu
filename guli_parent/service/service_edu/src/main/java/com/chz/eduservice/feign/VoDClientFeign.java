@@ -1,5 +1,6 @@
 package com.chz.eduservice.feign;
 
+import com.chz.eduservice.feign.impl.VoDClientFeignImpl;
 import com.chz.response.ResponseBo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;

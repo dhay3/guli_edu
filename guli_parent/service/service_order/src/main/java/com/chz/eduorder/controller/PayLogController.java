@@ -48,7 +48,7 @@ public class PayLogController {
      */
     @ApiOperation("status 0 表示未支付, 1表示已经支付")
     @GetMapping("/{orderNo}")
-    public ResponseBo getOrderStatus(@PathVariable String orderNo) {
+    public ResponseBo getOrderStatusInWX(@PathVariable String orderNo) {
         //需要调用weixin提供的api获取信息
         Map<String, String> res = payLogService.queryOrderStatusByOrderId(orderNo);
         log.info("queryOrderStatus--->{}", res);
