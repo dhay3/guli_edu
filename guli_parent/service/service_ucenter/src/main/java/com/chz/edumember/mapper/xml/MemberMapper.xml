@@ -4,24 +4,29 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.chz.edumember.entity.Member">
-        <id column="id" property="id" />
-        <result column="openid" property="openid" />
-        <result column="mobile" property="mobile" />
-        <result column="password" property="password" />
-        <result column="nickname" property="nickname" />
-        <result column="sex" property="sex" />
-        <result column="age" property="age" />
-        <result column="avatar" property="avatar" />
-        <result column="sign" property="sign" />
-        <result column="is_disabled" property="disabled" />
-        <result column="is_deleted" property="deleted" />
-        <result column="gmt_create" property="gmtCreate" />
-        <result column="gmt_modified" property="gmtModified" />
+        <id column="id" property="id"/>
+        <result column="openid" property="openid"/>
+        <result column="mobile" property="mobile"/>
+        <result column="password" property="password"/>
+        <result column="nickname" property="nickname"/>
+        <result column="sex" property="sex"/>
+        <result column="age" property="age"/>
+        <result column="avatar" property="avatar"/>
+        <result column="sign" property="sign"/>
+        <result column="is_disabled" property="disabled"/>
+        <result column="is_deleted" property="deleted"/>
+        <result column="gmt_create" property="gmtCreate"/>
+        <result column="gmt_modified" property="gmtModified"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
         id, openid, mobile, password, nickname, sex, age, avatar, sign, is_disabled, is_deleted, gmt_create, gmt_modified
     </sql>
+    <!--    由于使用了SQL自带函数, 所以需要使用xml-->
+    <select id="queryRegisterCountByDate" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM ucenter_member
+        WHERE  DATE(gmt_create) = #{date}
+    </select>
 
 </mapper>

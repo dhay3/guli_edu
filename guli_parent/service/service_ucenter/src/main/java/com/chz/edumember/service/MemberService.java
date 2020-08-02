@@ -29,4 +29,10 @@ public interface MemberService extends IService<Member> {
 
     Member saveWechatUserIfNotExist(String openid, String access_token);
 
+    /**
+     * 查询指定天数的注册人数
+     * @param date
+     * @return
+     */
+    int queryRegisterCountByDate(String date);
 }

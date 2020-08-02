@@ -9,6 +9,7 @@ import com.chz.edumember.service.MemberService;
 import com.chz.response.ResponseBo;
 import com.chz.utils.JwtUtils;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -72,6 +73,19 @@ public class MemberController {
         MemberVo memberVo = new MemberVo();
         BeanUtils.copyProperties(member, memberVo);
         return ResponseBo.ok().data("memberVo", memberVo);
+    }
+
+    /**
+     * 由于使用了SQL自带函数, 所以需要使用xml
+     *
+     * @param date
+     * @return
+     */
+    @ApiOperation("查询指定日期注册的人数")
+    @GetMapping("/date/{date}")
+    public ResponseBo queryRegisterCountByDate(@PathVariable String date) {
+        int registerCount = memberService.queryRegisterCountByDate(date);
+        return ResponseBo.ok().data("registerCount", registerCount);
     }
 
 }

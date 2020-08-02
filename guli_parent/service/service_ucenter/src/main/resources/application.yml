@@ -41,4 +41,8 @@ mybatis-plus:
       logic-not-delete-value: 0 #未删除的, 默认0
   #配置xml扫描, classpath对应的当前模块
   mapper-locations:
-    - classpath:com/chz/eduservice/mapper/xml/*.xml
+    - classpath:com/chz/edumember/mapper/xml/*.xml
+feign: #开启熔断机制
+  hystrix:
+    enabled: true
+    #设置hystrix超时时间, 默认1000ms

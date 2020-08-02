@@ -12,5 +12,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2020-07-23
  */
 public interface MemberMapper extends BaseMapper<Member> {
-
+    /**
+     * int会自动封装
+     *
+     * @param date
+     * @return
+     */
+    int queryRegisterCountByDate(String date);
 }

@@ -35,6 +35,11 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
+    @Override
+    public int queryRegisterCountByDate(String date) {
+        return baseMapper.queryRegisterCountByDate(date);
+    }
+
     /**
      * 根据手机号码和密码查询数据库
      *
@@ -108,7 +113,7 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
     @Override
     public Member saveWechatUserIfNotExist(String openid, String access_token) {
         Member member = checkWechatUserByOpenId(openid);
-        if (ObjectUtils.isEmpty(checkWechatUserByOpenId(openid))){
+        if (ObjectUtils.isEmpty(checkWechatUserByOpenId(openid))) {
             String userInfoUrlByAccessToken = WechatUtils.getUserInfoUrlByAccessToken(access_token);
             String userInfo = null;
             try {
