@@ -31,8 +31,8 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 //会自动扫描当前模块下使用了Swagger2注解的类
                 .select()
-                //这些都是springboot中默认的一些url, 需要忽略
-                .paths(Predicates.not(PathSelectors.regex("/admin/.*")))
+                //这些都是springboot中默认的一些url, 需要忽略, 不会在swagger中显示
+//                .paths(Predicates.not(PathSelectors.regex("/admin/.*")))
                 .paths(Predicates.not(PathSelectors.regex("/error.*")))
                 .build();
     }

@@ -5,7 +5,6 @@ import com.chz.response.ResponseBo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +14,7 @@ import java.io.IOException;
 
 @Api("oss控制器")
 @RestController
-@CrossOrigin(origins = "http://localhost:9528")
+//@CrossOrigin(origins = "http://localhost:9528")
 @RequestMapping("/eduoss/fileoss")
 public class OssController {
     @Autowired

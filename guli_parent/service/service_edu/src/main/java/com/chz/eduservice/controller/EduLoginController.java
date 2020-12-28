@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Api("登入接口")
 @RestController
-@CrossOrigin(origins = "http://localhost:9528")
+//@CrossOrigin(origins = "http://localhost:9528")
 @RequestMapping("/eduservice/user")
 public class EduLoginController {
     /**

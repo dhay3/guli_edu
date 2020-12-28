@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Api("类别接口,上传xslx接口")
 @RestController
-@CrossOrigin(origins = "http://localhost:9528")
+//@CrossOrigin(origins = "http://localhost:9528")
 @RequestMapping("/eduservice/subject")
 public class SubjectController {
     @Autowired

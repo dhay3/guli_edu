@@ -2,14 +2,17 @@ package com.chz.acl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @Author: CHZ
- * @DateTime: 2020/7/20 22:37
+ * @DaeTime: 2020/7/20 22:37
  * @Description: TODO
  */
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@EnableDiscoveryClient
+@SpringBootApplication(scanBasePackages = {
+        "com.chz.acl","com.chz.servicebase","com.chz.security"
+})
 public class AclApplication {
     public static void main(String[] args) {
         SpringApplication.run(AclApplication.class, args);

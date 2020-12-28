@@ -7,6 +7,8 @@
         <module>service_edu</module>
         <module>service/service_edu</module>
         <module>common</module>
+        <module>gateway_api</module>
+        <module>api_gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

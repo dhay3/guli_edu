@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Api("章节接口")
 @RestController
-@CrossOrigin
+//@CrossOrigin
 @RequestMapping("/eduservice/chapter")
 public class ChapterController {
     @Autowired

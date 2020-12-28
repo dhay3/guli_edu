@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api("视频小节接口")
 @RestController
-@CrossOrigin
+//@CrossOrigin
 @RequestMapping("/eduservice/video")
 public class VideoController {
     @Autowired

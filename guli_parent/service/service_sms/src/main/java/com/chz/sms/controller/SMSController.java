@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @RequestMapping("/edusms/sms")
-@CrossOrigin
+//@CrossOrigin
 public class SMSController {
     @Autowired
     private SMSService smsService;

@@ -29,7 +29,7 @@ import java.util.HashMap;
 @Api("课程接口")
 @Validated
 @RestController
-@CrossOrigin//接收所有跨域请求
+//@CrossOrigin//接收所有跨域请求
 @RequestMapping("/eduservice/course")
 public class CourseController {
     @Autowired
@@ -108,7 +108,6 @@ public class CourseController {
         courseService.removeCourseById(courseId);
         return ResponseBo.ok();
     }
-
 
 }
 
