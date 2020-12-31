@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "wx.open",
+      "type": "com.chz.edumember.utils.WechatUtils",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "wx.open.app-id",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    },
+    {
+      "name": "wx.open.app-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    },
+    {
+      "name": "wx.open.redirect-url",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    },
+    {
+      "name": "wx.open.w-x-a-p-p-i-d",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    },
+    {
+      "name": "wx.open.w-x-a-p-p-s-e-c-r-e-t",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    },
+    {
+      "name": "wx.open.w-x-r-e-d-i-r-e-c-t-u-r-l",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.edumember.utils.WechatUtils"
+    }
+  ],
+  "hints": []
+}

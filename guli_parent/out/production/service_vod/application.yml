@@ -1,0 +1,19 @@
+# 服务端口
+server:
+  port: 8003
+#服务名
+spring:
+  application:
+    name: service-vod
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true #开启文件上传,缺省值true
+      max-file-size: "1024MB" #允许上传单个最大文件
+      max-request-size: "1024MB" #允许上传的总的最大容量
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #nacos注册与发现
+

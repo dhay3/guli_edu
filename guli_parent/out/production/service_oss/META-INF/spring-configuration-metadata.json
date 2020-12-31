@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "aliyun.oss.file",
+      "type": "com.chz.oss.uitls.OssUtils",
+      "sourceType": "com.chz.oss.uitls.OssUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "aliyun.oss.file.b-u-c-k-e-t-n-a-m-e",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.oss.uitls.OssUtils"
+    },
+    {
+      "name": "aliyun.oss.file.bucketname",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.oss.uitls.OssUtils"
+    },
+    {
+      "name": "aliyun.oss.file.e-n-d-p-o-i-n-t",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.oss.uitls.OssUtils"
+    },
+    {
+      "name": "aliyun.oss.file.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.oss.uitls.OssUtils"
+    }
+  ],
+  "hints": []
+}

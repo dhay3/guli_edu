@@ -9,8 +9,8 @@ import io.swagger.annotations.ApiModel;
  */
 @ApiModel("提供aliyun密钥工具类")
 public class AliyunUtils {
-
+    //AK 改
     public final static String KEY_ID = "LTAIx6y17sJV7WQz";
-
+    //AKS 改
     public final static String KEY_SECRET = "UeHn5yHJlNCivHL4qD6AK335CsoyG3";
 }

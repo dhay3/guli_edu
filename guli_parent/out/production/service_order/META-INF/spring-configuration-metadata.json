@@ -1,0 +1,52 @@
+{
+  "groups": [
+    {
+      "name": "weixin.pay",
+      "type": "com.chz.eduorder.utils.WXPayUtils",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "weixin.pay.a-p-p-i-d",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    },
+    {
+      "name": "weixin.pay.appid",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    },
+    {
+      "name": "weixin.pay.n-o-t-i-f-y-u-r-l",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    },
+    {
+      "name": "weixin.pay.notifyurl",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    },
+    {
+      "name": "weixin.pay.p-a-r-t-n-e-r",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    },
+    {
+      "name": "weixin.pay.p-a-r-t-n-e-r-k-e-y",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    },
+    {
+      "name": "weixin.pay.partner",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    },
+    {
+      "name": "weixin.pay.partnerkey",
+      "type": "java.lang.String",
+      "sourceType": "com.chz.eduorder.utils.WXPayUtils"
+    }
+  ],
+  "hints": []
+}

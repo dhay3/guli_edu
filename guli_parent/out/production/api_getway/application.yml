@@ -1,0 +1,19 @@
+server:
+  port: 8222
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      enabled: true #开启网关, 有了网关就不需要@CrossOrigin, 缺省值为true
+      routes: #是一个list
+        - id: service-edu #设置一个路由id, 可以随便写
+          uri: http://www.baidu.com #设置请求转发的uri, 固定格式 lb://服务名
+          predicates: #和nginx中匹配的路径相似, 匹配/eduservice/**,
+            - Path=/eduserivce/**
+        - id: service-cms
+          uri: lb://service-cms
+          predicates: Path=/educms/**
