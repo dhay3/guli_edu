@@ -1,4 +1,0 @@
-2020-07-21 16:21:41.418 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
-2020-07-21 16:21:41.771 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
-2020-07-21 16:21:41.775 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
-2020-07-21 16:21:51.969 [http-nio-8001-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool - idleTimeout is close to or more than maxLifetime, disabling it.
