@@ -4,10 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>service</module>
-        <module>service_edu</module>
-        <module>service/service_edu</module>
         <module>common</module>
-        <module>gateway_api</module>
         <module>api_gateway</module>
     </modules>
     <parent>
@@ -32,7 +29,6 @@
         <mybatis-plus.generator>3.3.1</mybatis-plus.generator>
         <velocity.version>2.2</velocity.version>
         <swagger.version>2.9.2</swagger.version>
-        <aliyun.oss.version>2.8.3</aliyun.oss.version>
         <jodatime.version>2.10.1</jodatime.version>
         <poi.version>3.17</poi.version>
         <commons-fileupload.version>1.3.3</commons-fileupload.version>
@@ -41,6 +37,7 @@
         <jwt.version>0.7.0</jwt.version>
         <aliyun-java-sdk-core.version>4.5.3</aliyun-java-sdk-core.version>
         <aliyun-sdk-oss.version>3.1.0</aliyun-sdk-oss.version>
+        <aliyun.oss.version>3.1.0</aliyun.oss.version>
         <aliyun-java-sdk-vod.version>2.15.2</aliyun-java-sdk-vod.version>
         <aliyun-java-vod-upload.version>1.4.11</aliyun-java-vod-upload.version>
         <aliyun-sdk-vod-upload.version>1.4.12</aliyun-sdk-vod-upload.version>
@@ -109,12 +106,12 @@
                 <version>${swagger.version}</version>
             </dependency>
 
-            <!--aliyunOSS-->
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun.oss.version}</version>
-            </dependency>
+            <!--            aliyunOSS-->
+<!--            <dependency>-->
+<!--                <groupId>com.aliyun.oss</groupId>-->
+<!--                <artifactId>aliyun-sdk-oss</artifactId>-->
+<!--                <version>${aliyun.oss.version}</version>-->
+<!--            </dependency>-->
 
             <!--日期时间工具-->
             <dependency>

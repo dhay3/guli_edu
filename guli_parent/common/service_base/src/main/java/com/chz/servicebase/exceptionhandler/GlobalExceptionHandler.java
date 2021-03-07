@@ -28,9 +28,6 @@ public class GlobalExceptionHandler {
 
     /**
      * 没有可以处理异常的ExceptionHandler经过该处理器
-     *
-     * @param e
-     * @return
      */
     @ExceptionHandler
     public ResponseBo errorHandler(Exception e) {

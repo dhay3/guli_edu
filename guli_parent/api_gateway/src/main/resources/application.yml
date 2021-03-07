@@ -8,6 +8,9 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848 #和zull相同, 同样需要注入到服务注册中心
     gateway:
+      discovery:
+        locator:
+          enabled: true
       enabled: true #开启网关, 缺省为true
       routes:
         - id: service-edu #服务的id, 可以是任意值

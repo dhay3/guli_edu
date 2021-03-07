@@ -42,6 +42,7 @@ public class IndexServiceImpl implements IndexService {
         User user = userService.selectByUsername(username);
         if (null == user) {
             //throw new GuliException(ResultCodeEnum.FETCH_USERINFO_ERROR);
+//            throw new CusException();
         }
 
         //根据用户id获取角色

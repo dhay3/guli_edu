@@ -37,7 +37,7 @@ public class ResponseBo {
         return new ResponseBo()
                 .success(true)
                 .code(ResultCode.SUCCESS.val())
-                .message("成功");
+                .message("请求成功");
     }
 
     /**
@@ -48,7 +48,7 @@ public class ResponseBo {
         return new ResponseBo()
                 .success(false)
                 .code(ResultCode.ERROR.val())
-                .message("失败");
+                .message("请求失败");
     }
 
     /**

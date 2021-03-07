@@ -3,7 +3,8 @@ AliyunUtils.java
 guli_parent/out/
 # Compiled class file
 *.class
-
+nginx-1.9.9/**
+nacos-server-1.3.1/**
 # Log file
 *.log
 
