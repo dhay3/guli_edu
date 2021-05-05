@@ -10,6 +10,7 @@ import com.chz.response.ResponseBo;
 import com.chz.utils.JwtUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author chz
  * @since 2020-07-23
  */
+@Slf4j
 @Api("用户模块")
 @RestController
 @RequestMapping("/api/ucenter")
@@ -41,6 +43,7 @@ public class MemberController {
     public ResponseBo login(@RequestBody MemberLoginVo member) {
         //登入成功返回token值, 为了实现单点登入, 这里使用
         String token = memberService.login(member);
+        log.info("token-------------{}",token);
         return ResponseBo.ok().data("token", token);
     }
 

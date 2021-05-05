@@ -42,8 +42,8 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("网站-课程中心Api文档")
-                .description("本文档描述了课程中心微服务接口定义")
+                .title("Api文档")
+                .description("make a comment")
                 .contact(new Contact("chz", "https://www.chz.com", "kikochz@163.com"))
                 .version(VERSION)
                 .build();

@@ -8,7 +8,6 @@ import com.chz.response.ResponseBo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +20,6 @@ import java.util.List;
  * @Description: TODO
  */
 @Api("处理用户界面发送到后端的请求")
-@CrossOrigin
 @RestController
 @RequestMapping("/eduservice/front")
 public class FrontIndexController {
@@ -38,6 +36,4 @@ public class FrontIndexController {
         List<Course> courses = courseService.getTopCoursesDESC();
         return ResponseBo.ok().data("teachers", teachers).data("courses", courses);
     }
-
-
 }

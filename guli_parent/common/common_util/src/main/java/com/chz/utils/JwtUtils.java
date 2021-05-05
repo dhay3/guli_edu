@@ -36,24 +36,21 @@ public class JwtUtils {
         String JwtToken = Jwts.builder()
                 //设置头部分
                 .setHeaderParam("typ", "JWT")
-                .setHeaderParam("alg", "HS256")
-
-                .setSubject("guli-user")
+                .setHeaderParam("alg", "HS1")
+                .setSubject("user")
                 //token过期时间
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE))
-
                 //设置token的主体部分,有效荷载,可以自定义添加
                 .claim("id", id)
                 .claim("nickname", nickname)
 //                .claim("gender",gender)
-
                 //设置签名hash, 使用HS256
                 .signWith(SignatureAlgorithm.HS256, APP_SECRET)
                 .compact();
-
         return JwtToken;
     }
+
 
     /**
      * 判断token是否存在与有效
